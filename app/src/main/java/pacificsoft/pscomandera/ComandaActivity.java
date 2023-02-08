@@ -60,6 +60,7 @@ public class ComandaActivity extends AppCompatActivity implements LoadingTask.Lo
   SharedPreferences mPreferences;
 
   Comanda comanda;
+  Comanda comanda2;
   AdapterComanda adapterComanda;
 
   Usuario usuario = new Usuario();
