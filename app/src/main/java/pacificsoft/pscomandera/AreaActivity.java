@@ -47,6 +47,7 @@ import pacificsoft.pscomandera.Util.CustomAlert;
 public class AreaActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,AdapterArea.ItemAreaListener, CargarConfiguracion.CargaConfiguracionListener,LoadingTask.LoadingTaskListener {
 
     List<Area> lstAreas;
+	List<Area> lstAreas2;
     Configuracion configuracion;
     RecyclerView reciclerViewAreas ;
     private SwipeRefreshLayout swipeRefreshLayout;
