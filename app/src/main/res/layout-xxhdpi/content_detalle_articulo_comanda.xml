@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".DetalleArticuloComandaActivity"
+    tools:showIn="@layout/activity_detalle_articulo_comanda">
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineMarginLeftParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/padding_content_view" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineMarginRightParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/padding_content_view" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineMarginTopParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/padding_content_view" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineMarginBottomParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/padding_content_view" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/textViewTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_activity_detalle_articulo_comanda"
+        android:textAllCaps="true"
+        app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeftParent"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineMarginTopParent" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardViewContentdetalle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineMarginBottomParent"
+        app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeftParent"
+        app:layout_constraintRight_toLeftOf="@+id/guidelineMarginRightParent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitulo"
+        app:cardElevation="@dimen/elevation_carview_content_comanda">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guidelineMarginLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/padding_content_view" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guidelineMarginRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/padding_content_view" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guidelineMarginTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="@dimen/padding_content_view" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guidelineMarginBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_end="@dimen/padding_content_view" />
+
+
+            <ScrollView
+                android:id="@+id/scrollViewContent"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/padding_content_view"
+                app:layout_constraintBottom_toTopOf="@+id/contentFooter"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@+id/guidelineMarginRight"
+                app:layout_constraintTop_toBottomOf="@+id/guidelineMarginTop">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+
+                    <ImageView
+                        android:id="@+id/imagenPlatillo"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/height_imagen_platillo_detalle_articulo"
+                        android:scaleType="fitXY"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/img_default_platillo" />
+
+                    <View
+                        android:id="@+id/guidelineFadeImagenPlatillo"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:visibility="invisible"
+                        app:layout_constraintTop_toTopOf="@id/imagenPlatillo"
+                        app:layout_constraintBottom_toBottomOf="@id/imagenPlatillo"
+                        app:layout_constraintStart_toStartOf="@id/imagenPlatillo"
+                        app:layout_constraintEnd_toEndOf="@id/imagenPlatillo"/>
+
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/background_gradient_fade_articulo"
+                        app:layout_constraintStart_toStartOf="@id/imagenPlatillo"
+                        app:layout_constraintEnd_toEndOf="@id/imagenPlatillo"
+                        app:layout_constraintTop_toTopOf="@id/guidelineFadeImagenPlatillo"
+                        app:layout_constraintBottom_toBottomOf="@id/imagenPlatillo"/>
+
+                    <TextView
+                        android:id="@+id/textViewDescripcionArticulo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/arial"
+                        android:gravity="center"
+                        android:text="Ensalada de la casa con texto mas largo de lo normal"
+                        android:paddingStart="@dimen/padding_textview_descripcion_item_platillo"
+                        android:paddingEnd="@dimen/padding_textview_descripcion_item_platillo"
+                        android:paddingBottom="@dimen/padding_textview_descripcion_item_platillo"
+                        app:layout_constraintStart_toStartOf="@id/imagenPlatillo"
+                        app:layout_constraintEnd_toEndOf="@id/imagenPlatillo"
+                        app:layout_constraintBottom_toBottomOf="@id/imagenPlatillo" />
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/contentTextviewSpinnerNotas"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/imagenPlatillo">
+
+                        <CheckBox
+                            android:id="@+id/checkBoxSwitchTexto"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Texto notas"
+                            android:fontFamily="@font/arial"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <android.support.constraint.ConstraintLayout
+                            android:id="@+id/contentSpinnerEditText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toStartOf="@id/rippleImageButtonAgregarNota"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/checkBoxSwitchTexto">
+
+                            <Spinner
+                                android:id="@+id/spinnerNotas"
+                                style="@style/Widget.AppCompat.Spinner.Underlined"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="0dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:listitem="@layout/row_item_spinner_notas" />
+
+                            <EditText
+                                android:id="@+id/editTextNotas"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/arial"
+                                android:textColor="@color/colorNegro"
+                                android:gravity="top|left"
+                                android:text=""
+                                android:inputType="textMultiLine"
+                                android:maxLines="1"
+                                android:minLines="@integer/munLinesDetalleArticulo"
+                                android:padding="@dimen/padding_edit_text_notas_detalle_articulo"
+                                android:visibility="gone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </android.support.constraint.ConstraintLayout>
+
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:id="@+id/rippleImageButtonAgregarNota"
+                            style="@style/RippleStyleBlue"
+                            android:layout_width="@dimen/width_image_button_agregar_nota"
+                            android:layout_height="@dimen/width_image_button_agregar_nota"
+                            app:layout_constraintBottom_toBottomOf="@id/contentSpinnerEditText"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/contentSpinnerEditText"
+                            app:mrl_rippleDelayClick="false">
+
+                            <ImageButton
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/agregar"
+                                android:scaleType="fitXY" />
+
+                        </com.balysv.materialripple.MaterialRippleLayout>
+
+
+                    </android.support.constraint.ConstraintLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerViewNotas"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:paddingBottom="@dimen/activity_vertical_margin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorDivider"
+                        tools:itemCount="0"
+                        tools:layoutManager="android.support.v7.widget.StaggeredGridLayoutManager"
+                        tools:listitem="@layout/item_nota"
+                        tools:orientation="vertical"
+                        tools:spanCount="@integer/columnsGridViewNotas"
+                        android:layout_marginTop="@dimen/padding_content_view"
+                        app:layout_constraintTop_toBottomOf="@id/contentTextviewSpinnerNotas"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:minHeight="60dp"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerViewModificadorDetalles"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        tools:itemCount="7"
+                        tools:layoutManager="android.support.v7.widget.StaggeredGridLayoutManager"
+                        tools:listitem="@layout/item_modificador_detalle"
+                        tools:orientation="vertical"
+                        android:scrollbars="vertical"
+                        android:fadeScrollbars="true"
+                        android:layout_marginTop="@dimen/padding_content_view"
+                        tools:spanCount="@integer/columnsGridViewModificadorDetalle"
+                        app:layout_constraintTop_toBottomOf="@id/recyclerViewNotas"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+                </android.support.constraint.ConstraintLayout>
+            </ScrollView>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/contentFooter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/guidelineMarginBottom"
+                app:layout_constraintStart_toStartOf="@id/guidelineMarginLeft"
+                app:layout_constraintEnd_toEndOf="@+id/guidelineMarginRight"
+                android:background="@color/colorBlanco">
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guidelineUnderlinePrecioTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="@dimen/porcentaje_guide_line_underline_total_detalle_articulo" />
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/contentPrecioCantidad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/dividerUnderlinePrecioTotal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+
+                    <TextView
+                        android:id="@+id/textViewTotalLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:textColorLink="@color/colorPrimaryDark"
+                        android:text="Total "
+                        android:textSize="@dimen/text_size_total_detalle_articulo"
+                        android:fontFamily="@font/arial"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/textViewSignoMoneda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/arial"
+                        android:text="@string/signo_moneda"
+                        android:textSize="@dimen/text_size_total_detalle_articulo"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:textColorLink="@color/colorPrimaryDark"
+                        app:layout_constraintStart_toEndOf="@id/textViewTotalLabel"
+                        app:layout_constraintTop_toTopOf="@id/textViewPrecio"
+                        app:layout_constraintBottom_toBottomOf="@id/textViewPrecio"/>
+
+                    <TextView
+                        android:id="@+id/textViewPrecio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/arial"
+                        android:text="0.00"
+                        android:textSize="@dimen/text_size_total_detalle_articulo"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:textColorLink="@color/colorPrimaryDark"
+                        app:layout_constraintStart_toEndOf="@+id/textViewSignoMoneda"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/contentCantidad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_left_content_cantidad_detalle_articulo"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/textViewPrecio"
+                        app:layout_constraintBottom_toBottomOf="parent">
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:id="@+id/rippleMenosCantidad"
+                            style="@style/RippleStyleBlue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent">
+                            <TextView
+                                android:layout_width="@dimen/width_button_menos_mas_cantidad_detalle_articulo"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:textSize="@dimen/text_size_button_mas_menos_cantidad_detalle_articulo"
+                                android:textAlignment="center"
+                                android:fontFamily="@font/arial"
+                                android:textColor="@color/colorNegro"/>
+                            <!--<ImageView-->
+                            <!--android:layout_width="40dp"-->
+                            <!--android:layout_height="40dp"-->
+                            <!--app:srcCompat="@drawable/ic_minus_solid"-->
+                            <!--android:tint="@color/colorNegro"/>-->
+                        </com.balysv.materialripple.MaterialRippleLayout>
+
+                        <EditText
+                            android:id="@+id/editTextCantidad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minWidth="@dimen/min_width_button_menos_mas_cantidad_detalle_articulo"
+                            android:fontFamily="@font/arial"
+                            android:textAlignment="center"
+                            android:inputType="number"
+                            android:textColor="@color/colorPrimary"
+                            android:text="1"
+                            android:textSize="@dimen/text_size_total_detalle_articulo"
+                            app:layout_constraintStart_toEndOf="@id/rippleMenosCantidad"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:id="@+id/rippleMasCantidad"
+                            style="@style/RippleStyleBlue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/editTextCantidad"
+                            app:layout_constraintBottom_toBottomOf="parent">
+
+                            <TextView
+                                android:layout_width="@dimen/width_button_menos_mas_cantidad_detalle_articulo"
+                                android:layout_height="wrap_content"
+                                android:text="+"
+                                android:textSize="@dimen/text_size_button_mas_menos_cantidad_detalle_articulo"
+                                android:textAlignment="center"
+                                android:fontFamily="@font/arial"
+                                android:textColor="@color/colorNegro"/>
+                            <!--<ImageView-->
+                            <!--android:layout_width="40dp"-->
+                            <!--android:layout_height="40dp"-->
+                            <!--android:tint="@color/colorNegro"-->
+                            <!--app:srcCompat="@drawable/ic_plus_solid"/>-->
+                        </com.balysv.materialripple.MaterialRippleLayout>
+                    </android.support.constraint.ConstraintLayout>
+
+
+                </android.support.constraint.ConstraintLayout>
+
+                <View
+                    android:id="@+id/dividerUnderlinePrecioTotal"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/height_divider_underline_total"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_marginBottom="@dimen/padding_content_view"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineUnderlinePrecioTotal"
+                    app:layout_constraintBottom_toTopOf="@id/contentBottomButtons"/>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/contentBottomButtons"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/rippleImageViewAtras"
+                        style="@style/RippleStyleBlue"
+                        android:layout_width="@dimen/width_imagen_riple_atras_detalle_articulo"
+                        android:layout_height="@dimen/width_imagen_riple_atras_detalle_articulo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/rippleButtonGuardarNota"
+                        app:mrl_rippleDelayClick="false">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/atras"
+                            app:layout_constraintBottom_toBottomOf="@id/guidelineMarginBottom"
+                            app:layout_constraintHorizontal_chainStyle="spread_inside"
+                            app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                            app:layout_constraintRight_toLeftOf="@id/rippleButtonGuardarNota" />
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/rippleButtonGuardarNota"
+                        style="@style/RippleStyleBlue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_button_comandera_radius"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintLeft_toRightOf="@+id/rippleImageViewAtras"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:mrl_rippleDelayClick="false">
+
+                        <Button
+                            android:id="@+id/guardarCambios"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:paddingLeft="@dimen/padding_button_aceptar"
+                            android:paddingRight="@dimen/padding_button_aceptar"
+                            android:paddingTop="@dimen/padding_top_bottom_button_aceptar"
+                            android:paddingBottom="@dimen/padding_top_bottom_button_aceptar"
+                            android:text="@string/msj_comanda_button_guardar_cambios" />
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.constraint.ConstraintLayout>
+
+
+
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+</android.support.constraint.ConstraintLayout>

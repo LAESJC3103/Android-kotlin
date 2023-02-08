@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ComandaActivity"
+    tools:showIn="@layout/activity_comanda">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/horizontal_margin_content_comanda" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/horizontal_margin_content_comanda" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/vertical_margin_content_comanda" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/vertical_margin_content_comanda" />
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:theme="@style/ContentThemeComanda"
+        app:cardCornerRadius="@dimen/corner_radius_cardview_content_comanda"
+        app:cardElevation="@dimen/elevation_carview_content_comanda"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineBottom"
+        app:layout_constraintLeft_toRightOf="@+id/guidelineLeft"
+        app:layout_constraintRight_toLeftOf="@+id/guidelineRight"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineTop">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraintContentComanda"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/dividerContentComanda"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guidelineLeft2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="@dimen/vertical_margin_content_comanda" />
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guidelineRight2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="@dimen/vertical_margin_content_comanda" />
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guidelineBottom2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_end="@dimen/horizontal_margin_content_comanda" />
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guidelineTop2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="@dimen/horizontal_margin_content_comanda" />
+                <android.support.constraint.Guideline
+                    android:id="@+id/guidelineLongDivierViewTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="@dimen/posicion_view_division_total" />
+
+                <TextView
+                    android:id="@+id/textViewCuenta"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_text_view_item_comanda"
+                    android:fontFamily="@font/arial"
+                    android:text="Cuenta"
+                    android:textColor="@color/colorPrimary"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/text_size_text_view_descripcion_item_comanda"
+                    app:layout_constraintTop_toBottomOf="@+id/guidelineTop2"
+                    app:layout_constraintLeft_toLeftOf="@id/guidelineLeft2"
+                    app:layout_constraintStart_toStartOf="@id/guidelineLeft2"
+                    app:layout_constraintRight_toRightOf="@+id/guidelineRight2"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineRight2"/>
+                <View
+                    android:id="@+id/dividerCuenta"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/height_width_divider_item_comanda"
+                    android:background="@color/dividerCuenta"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewCuenta"
+                    app:layout_constraintLeft_toLeftOf="@id/guidelineLeft2"
+                    app:layout_constraintStart_toStartOf="@id/guidelineLeft2"
+                    app:layout_constraintRight_toRightOf="@+id/guidelineRight2"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineRight2"
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/reciclerViewComanda"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="@dimen/margin_start_end_content_item_comanda"
+                    tools:itemCount="7"
+                    tools:layoutManager="android.support.v7.widget.GridLayoutManager"
+                    tools:listitem="@layout/item_comanda"
+                    tools:orientation="vertical"
+                    android:scrollbars="vertical"
+                    android:fadeScrollbars="true"
+                    tools:spanCount="@integer/columnsGridViewComanda"
+                    android:layout_marginTop="@dimen/horizontal_margin_content_comanda"
+                    app:layout_constraintBottom_toTopOf="@+id/textViewTotal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dividerCuenta"/>
+
+
+
+                <TextView
+                    android:id="@+id/textViewTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arial"
+                    android:paddingTop="@dimen/padding_total_comanda_content_comanda"
+                    android:paddingBottom="@dimen/padding_total_comanda_content_comanda"
+                    android:text="TOTAL $0.00"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/text_size_total_content_comanda"
+                    app:layout_constraintBottom_toTopOf="@+id/dividerTotal"
+                    app:layout_constraintStart_toStartOf="@+id/guidelineLeft2" />
+
+                <View
+                    android:id="@+id/dividerTotal"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/height_width_divider_item_comanda"
+                    android:background="@color/colorPrimaryDark"
+                    app:layout_constraintBottom_toTopOf="@+id/buttonCerrarPedido"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/guidelineLongDivierViewTotal"
+                    android:layout_marginBottom="@dimen/horizontal_margin_content_comanda"/>
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:id="@+id/rippleImageViewAtras"
+                    style="@style/RippleStyleBlue"
+                    android:layout_width="@dimen/width_imagen_riple_atras_detalle_articulo"
+                    android:layout_height="@dimen/width_imagen_riple_atras_detalle_articulo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintLeft_toLeftOf="@id/guidelineLeft2"
+                    app:layout_constraintTop_toBottomOf="@+id/dividerTotal"
+                    app:mrl_rippleDelayClick="false">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/atras"
+                        app:layout_constraintBottom_toBottomOf="@id/guidelineMarginBottom"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                        app:layout_constraintRight_toLeftOf="@id/rippleButtonGuardarNota" />
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:id="@+id/buttonCerrarPedido"
+                    style="@style/RippleStyleBlue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_button_comandera_radius"
+                    app:layout_constraintBottom_toTopOf="@+id/guidelineBottom2"
+                    app:layout_constraintRight_toLeftOf="@+id/guidelineRight2"
+                    app:mrl_rippleDelayClick="false">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:paddingLeft="@dimen/padding_button_aceptar"
+                        android:paddingTop="@dimen/padding_top_bottom_button_aceptar"
+                        android:paddingRight="@dimen/padding_button_aceptar"
+                        android:paddingBottom="@dimen/padding_top_bottom_button_aceptar"
+                        android:text="@string/msj_boton_enviar_comanda"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorBlanco" />
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <View
+                android:id="@+id/dividerContentComanda"
+                android:layout_width="@dimen/width_view_divider_content_comanda"
+                android:layout_height="0dp"
+                android:background="@color/colorDivider"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>

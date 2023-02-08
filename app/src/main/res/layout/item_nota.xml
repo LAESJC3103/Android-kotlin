@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.balysv.materialripple.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/RippleStyleWhite"
+    app:mrl_rippleDelayClick="false">
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintContentItemNota"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_selected_multiple_item_notas"
+        android:clickable="true">
+        <View
+            android:id="@+id/dividerRight"
+            android:layout_width="@dimen/width_item_nota_comanda"
+            android:layout_height="0dp"
+            android:alpha="@dimen/alpha_divider_right_item_nota_comanda"
+            android:background="@color/colorBlanco"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewDescripcion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:fontFamily="@font/arial"
+            android:text="TextView"
+            app:layout_constraintEnd_toStartOf="@id/dividerRight"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+
+
+</com.balysv.materialripple.MaterialRippleLayout>

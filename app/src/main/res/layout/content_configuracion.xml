@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_configuracion">
+
+
+    <ScrollView
+        android:id="@+id/scrollViewBodyContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btnguardar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/activity_horizontal_margin"
+            android:paddingBottom="@dimen/activity_horizontal_margin">
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guidelineMarginLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/margin_content_configuracion" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guidelinePaddingRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/margin_content_configuracion" />
+
+            <TextView
+                android:id="@+id/textViewTituloDatosGenerales"
+                style="@style/hintStyleEncabezadoConfiguracion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/lblDatosgenerales"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/dividerDatosGenerales"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toTopOf="@+id/textInputLayoutEndPointPrincipal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTituloDatosGenerales" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputLayoutEndPointPrincipal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_entre_rows_configuracion"
+                app:hintTextAppearance="@style/hintStyleTextInputLayout"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@+id/lblIconEstatusServiciosPrincipales"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTituloDatosGenerales">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edEndpointServiciosPrincipales"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:hint="@string/hintUrlServiciosWEB"
+                    android:inputType="textWebEditText" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/lblIconEstatusServiciosPrincipales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawingCacheQuality="auto"
+                android:fontFamily="@font/fa_regular_400"
+                android:gravity="center_horizontal|bottom"
+                android:text="@string/icon_check_circle"
+                android:textColor="@color/colorError"
+                android:textSize="@dimen/text_size_icon_validacion_configuracion"
+                app:layout_constraintBottom_toBottomOf="@id/textInputLayoutEndPointPrincipal"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toTopOf="@id/textInputLayoutEndPointPrincipal" />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputLayoutEmpresa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_entre_rows_configuracion"
+                app:hintTextAppearance="@style/hintStyleTextInputLayout"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEndPointPrincipal">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edEmpresa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:hint="@string/hintEmpresa"
+                    android:inputType="text" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputLayoutDomicilio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_entre_rows_configuracion"
+                app:hintTextAppearance="@style/hintStyleTextInputLayout"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEmpresa">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edDomicilio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hintDomicilio"
+                    android:inputType="text" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+
+                android:id="@+id/textInputLayoutNumero"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_entre_rows_configuracion"
+                app:hintTextAppearance="@style/hintStyleTextInputLayout"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@id/textInputLayoutCodigoPostal"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutDomicilio">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edNumero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hintNumero"
+                    android:inputType="text"
+
+
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+
+                android:id="@+id/textInputLayoutCodigoPostal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_entre_rows_configuracion"
+                app:hintTextAppearance="@style/hintStyleTextInputLayout"
+                app:layout_constraintLeft_toRightOf="@id/textInputLayoutNumero"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutDomicilio">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edCP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hintCodigoPostal"
+                    android:inputType="text" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+
+                android:id="@+id/textInputLayoutColonia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_entre_rows_configuracion"
+                app:hintTextAppearance="@style/hintStyleTextInputLayout"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutCodigoPostal">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edColonia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hintColonia"
+                    android:inputType="text" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+
+                android:id="@+id/textInputLayoutRFC"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_entre_rows_configuracion"
+                app:hintTextAppearance="@style/hintStyleTextInputLayout"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutColonia">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edRFC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hintRFC"
+                    android:inputType="text" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+
+                android:id="@+id/textInputLayoutTipoVendedor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_entre_rows_configuracion"
+                app:hintTextAppearance="@style/hintStyleTextInputLayout"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@id/lblIconDatosTerminal"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutRFC">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edTipoVendedor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hintTipoVendedor"
+                    android:inputType="number" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/lblIconTipoVendedor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/fa_regular_400"
+                android:text="@string/icon_check_circle"
+                android:textColor="@color/colorError"
+                android:textSize="@dimen/text_size_icon_validacion_configuracion"
+                app:layout_constraintBottom_toBottomOf="@+id/textInputLayoutTipoVendedor"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toTopOf="@id/textInputLayoutTipoVendedor" />
+
+            <TextView
+                android:id="@+id/textViewTituloConfiguracionCajasAlmacen"
+                style="@style/hintStyleEncabezadoConfiguracion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/lblConfiguracionAplicacion"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutTipoVendedor" />
+
+            <View
+                android:id="@+id/dividerDatosCajaAlmacen"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTituloConfiguracionCajasAlmacen" />
+
+            <TextView
+                android:id="@+id/lblHintCajas"
+                style="@style/hintStyleSpinnerLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:alpha="0.50"
+                android:paddingTop="@dimen/padding_entre_rows_configuracion"
+                android:text="@string/hintCaja"
+                android:visibility="visible"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toBottomOf="@+id/dividerDatosCajaAlmacen" />
+
+            <Spinner
+                android:id="@+id/spinCajas"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dialog"
+                android:theme="@style/spinnerUnderlineColor"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toBottomOf="@+id/lblHintCajas" />
+
+            <TextView
+                android:id="@+id/lblHintAlmacenMercancia"
+                style="@style/hintStyleSpinnerLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_entre_rows_configuracion"
+                android:text="@string/hintAlmacenMercancia"
+                android:visibility="visible"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toBottomOf="@+id/spinCajas" />
+
+            <Spinner
+                android:id="@+id/spinAlmacenMercancia"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dialog"
+                android:theme="@style/spinnerUnderlineColor"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toBottomOf="@+id/lblHintAlmacenMercancia" />
+
+            <TextView
+                android:id="@+id/lblHintAlmacenMateriaPrima"
+                style="@style/hintStyleSpinnerLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_entre_rows_configuracion"
+                android:text="@string/hintAlmacenMateriaPrima"
+                android:visibility="visible"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toBottomOf="@+id/spinAlmacenMercancia" />
+
+            <Spinner
+                android:id="@+id/spinAlmacenMateriaPrima"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dialog"
+                android:theme="@style/spinnerUnderlineColor"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toBottomOf="@+id/lblHintAlmacenMateriaPrima" />
+
+
+            <TextView
+                android:id="@+id/textViewTituloConfiguracionImpresora"
+                style="@style/hintStyleEncabezadoConfiguracion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/lblConfiguracionAplicacion"
+                android:visibility="gone"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toBottomOf="@+id/spinAlmacenMateriaPrima" />
+
+            <View
+                android:id="@+id/dividerDatosImpresora"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTituloConfiguracionImpresora" />
+
+            <TextView
+                android:id="@+id/lblHintImpresora"
+                style="@style/hintStyleSpinnerLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_entre_rows_configuracion"
+                android:text="@string/hintImpresora"
+                android:visibility="gone"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toBottomOf="@+id/dividerDatosImpresora" />
+
+            <Spinner
+                android:id="@+id/spinImpresora"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dialog"
+                android:theme="@style/spinnerUnderlineColor"
+                android:visibility="gone"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toBottomOf="@+id/lblHintImpresora" />
+
+            <TextView
+                android:id="@+id/lblHintModeloImpresora"
+                style="@style/hintStyleSpinnerLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_entre_rows_configuracion"
+                android:text="@string/hintModeloImpresora"
+                android:visibility="gone"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toBottomOf="@+id/spinImpresora" />
+
+            <Spinner
+                android:id="@+id/spinModeloImpresora"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dialog"
+                android:theme="@style/spinnerUnderlineColor"
+                android:visibility="gone"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toBottomOf="@+id/lblHintModeloImpresora" />
+
+
+            <TextView
+                android:id="@+id/textViewTituloDatosTerminal"
+                style="@style/hintStyleEncabezadoConfiguracion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/lblDatosTerminal"
+                android:visibility="gone"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toBottomOf="@+id/spinModeloImpresora" />
+
+
+            <android.support.design.widget.TextInputLayout
+
+                android:id="@+id/textInputLayoutServicioTerminal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_entre_rows_configuracion"
+                android:visibility="gone"
+                app:hintTextAppearance="@style/hintStyleTextInputLayout"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@+id/lblIconEstatusServiciosTerminal"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTituloDatosTerminal">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edEndpointServiciosPagoTarjeta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hintUrlMovimientos"
+                    android:inputType="textWebEditText"
+
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/lblIconEstatusServiciosTerminal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:fontFamily="@font/fa_regular_400"
+                android:gravity="right"
+                android:text="@string/icon_check_circle"
+                android:textColor="@color/colorError"
+                android:textSize="@dimen/text_size_icon_validacion_configuracion"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/textInputLayoutServicioTerminal"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toTopOf="@id/textInputLayoutServicioTerminal" />
+
+
+            <android.support.design.widget.TextInputLayout
+
+                android:id="@+id/textInputLayoutTerminal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_entre_rows_configuracion"
+                android:visibility="gone"
+                app:hintTextAppearance="@style/hintStyleTextInputLayout"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@id/lblIconDatosTerminal"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutServicioTerminal">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edTerminal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hintTerminal"
+                    android:inputType="number" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/lblIconDatosTerminal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/fa_regular_400"
+                android:text="@string/icon_check_circle"
+                android:textColor="@color/colorError"
+                android:textSize="@dimen/text_size_icon_validacion_configuracion"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/textInputLayoutTerminal"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toTopOf="@id/textInputLayoutTerminal" />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputLayoutClaveUsuario"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_entre_rows_configuracion"
+                android:visibility="gone"
+                app:hintTextAppearance="@style/hintStyleTextInputLayout"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutTerminal">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edClaveUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hintClaveUsuario"
+                    android:inputType="none" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+
+                android:id="@+id/textInputLayoutNoSerie"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_entre_rows_configuracion"
+                android:visibility="gone"
+                app:hintTextAppearance="@style/hintStyleTextInputLayout"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutClaveUsuario">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edNoSerie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hintNoSerie"
+                    android:inputType="none"
+
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/lblHintPinpad"
+                style="@style/hintStyleSpinnerLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_entre_rows_configuracion"
+                android:text="@string/hintPinpad"
+                android:visibility="gone"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutNoSerie" />
+
+            <Spinner
+                android:id="@+id/spinPinpad"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dialog"
+                android:theme="@style/spinnerUnderlineColor"
+
+                android:visibility="gone"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toBottomOf="@+id/lblHintPinpad" />
+
+            <android.support.design.widget.TextInputLayout
+
+                android:id="@+id/textInputLayoutCorreoElectronicoPagoTarjeta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_entre_rows_configuracion"
+                android:visibility="gone"
+                app:hintTextAppearance="@style/hintStyleTextInputLayout"
+                app:layout_constraintLeft_toRightOf="@+id/guidelineMarginLeft"
+                app:layout_constraintRight_toLeftOf="@+id/guidelinePaddingRight"
+                app:layout_constraintTop_toBottomOf="@+id/spinPinpad">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edCorreoElectronicoPagoTarjeta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hintCorreoElectronicoPagoTarjeta"
+                    android:inputType="textEmailAddress" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnguardar"
+        style="@style/btnPrimary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/guardar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
+

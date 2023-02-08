@@ -1,0 +1,64 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintContentRowItem"
+    android:theme="@style/hintItemStyleSpinner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false">
+
+
+    <TextView
+        android:id="@+id/imgitem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="@font/fa_solid_900"
+        android:paddingRight="@dimen/padding_right_img_row_item_spinner"
+        android:text="@string/icon_print"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/txtDescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Texto prueba"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/imgitem"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Texto prueba"
+        android:visibility="gone"
+        app:layout_constraintLeft_toRightOf="@+id/imgitem"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescripcion" />
+
+    <View
+        android:id="@+id/dividerRowItemTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_divider_row_item_spinner_titulo"
+        android:background="?android:attr/listDivider"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
+    <View
+        android:id="@+id/dividerRowItem"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_divider_row_item_spinner"
+        android:background="?android:attr/listDivider"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
+
+</android.support.constraint.ConstraintLayout>
+

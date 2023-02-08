@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.balysv.materialripple.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/RippleStyleBlue"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:mrl_rippleDelayClick="false">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/contentItemMesa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlanco"
+        android:clickable="true"
+        android:paddingStart="@dimen/vertical_margin_item_mesa"
+        android:paddingTop="@dimen/vertical_margin_item_mesa"
+        android:paddingEnd="@dimen/vertical_margin_item_mesa"
+        android:paddingBottom="@dimen/vertical_margin_item_mesa"
+        android:theme="@style/ContentThemeMesa">
+
+        <TextView
+            android:id="@+id/textViewDescripcionMesa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arial"
+            android:paddingLeft="@dimen/padding_textView_titulo_item_mesa"
+            android:paddingRight="@dimen/padding_textView_titulo_item_mesa"
+            android:text="Mesa 1"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toTopOf="@+id/divider"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewEstatusMesa"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageViewEstatusMesa"
+            android:layout_width="@dimen/widht_image_view_estatus_mesa"
+            android:layout_height="@dimen/widht_image_view_estatus_mesa"
+            android:layout_marginRight="@dimen/padding_textView_titulo_item_mesa"
+            android:layout_marginBottom="@dimen/padding_textView_titulo_item_mesa"
+            app:layout_constraintBottom_toBottomOf="@+id/divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/mesa_ocupada" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDarkDisabled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</com.balysv.materialripple.MaterialRippleLayout>

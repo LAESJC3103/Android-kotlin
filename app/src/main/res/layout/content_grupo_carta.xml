@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".GrupoCartaActivity"
+    tools:showIn="@layout/app_bar_grupo_carta">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineMarginLeftParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/padding_content_view" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineMarginRightParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/padding_content_view" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineMarginTopParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/padding_content_view" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineMarginBottomParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/padding_content_view" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayoutGrupos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_sepator_content_grupo"
+        android:paddingStart="@dimen/vertical_margin_tab_layout"
+        android:paddingEnd="@dimen/vertical_margin_tab_layout"
+        app:tabTextAppearance="@style/MyCustomTabText"
+        app:layout_constraintEnd_toEndOf="@id/guidelineMarginRightParent"
+        app:layout_constraintStart_toStartOf="@id/guidelineMarginLeftParent"
+        app:layout_constraintTop_toTopOf="@id/guidelineMarginTopParent"
+        app:tabMode="scrollable" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPagerGrupos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_sepator_content_grupo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayoutGrupos"
+        app:layout_constraintBottom_toTopOf="@id/guidelineMarginBottomParent"/>
+
+
+</android.support.constraint.ConstraintLayout>

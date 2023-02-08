@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    app:elevation="0dp"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:titleTextAppearance="@style/Toolbar.TitleText">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/contentPrecioCantidad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textViewTituloActividad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Titulo"
+                        android:textAllCaps="true"/>
+                    <TextView
+                        android:id="@+id/textViewSubTituloActividad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Subtitulo"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/text_size_sub_item_toolbar"/>
+
+                </LinearLayout>
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <HorizontalScrollView
+        android:id="@+id/contentMesa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/contentPrecioCantidad"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/margin_left_right_toolbar_carta_grupo"
+        android:layout_marginEnd="@dimen/margin_left_right_toolbar_carta_grupo">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end">
+
+            <TextView
+                android:id="@+id/textViewArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arial"
+                android:gravity="center|right"
+                android:singleLine="true"
+                android:text="@string/title_toolbar_area"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_sub_item_toolbar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/textViewAreaSeleccionada"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewAreaSeleccionada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/horizontal_margin_content_comanda"
+                android:fontFamily="@font/arial"
+                android:gravity="center|right"
+                android:text="AREA SELECCIONADA"
+                android:textAllCaps="true"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_sub_item_toolbar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/textViewMesa"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewMesa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arial"
+                android:gravity="center|right"
+                android:singleLine="true"
+                android:text="@string/title_toolbar_mesa"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_sub_item_toolbar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/textViewMesaSeleccionada"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewMesaSeleccionada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arial"
+                android:singleLine="true"
+                android:text="mesa 01"
+                android:textAllCaps="true"
+                android:textSize="@dimen/text_size_sub_item_toolbar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+
+
+    </HorizontalScrollView>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineDividerToolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="@fraction/porcentajeToolvarDivisor" />
+
+        <View
+            android:id="@+id/viewDividerToolbar"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/height_divider_view_toolbar"
+            android:background="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineDividerToolbar"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+
+
+
+</android.support.design.widget.AppBarLayout>

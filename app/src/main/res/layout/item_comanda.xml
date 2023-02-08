@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_separator_text_view_item_comanda"
+    android:theme="@style/ContentThemeComanda">
+
+    <!--<com.balysv.materialripple.MaterialRippleLayout-->
+        <!--android:id="@+id/rippleContentItem"-->
+        <!--style="@style/RippleStyleBlack"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:layout_constraintEnd_toStartOf="@id/dividerRight"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--android:layout_marginStart="@dimen/activity_vertical_margin"-->
+        <!--android:layout_marginEnd="@dimen/activity_vertical_margin"-->
+        <!--app:mrl_rippleDelayClick="false">-->
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/contentItemComanda"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/dividerRight"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/margin_start_end_content_item_comanda">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/contentPrecioDescripcion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:id="@+id/rippleContentHeaderItemComanda"
+                    style="@style/RippleStyleBlue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/rippleEditarArticuloComanda"
+                    app:mrl_rippleDelayClick="false">
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/contentHeaderItemComanda"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true">
+                        <TextView
+                            android:id="@+id/textViewCantidadArticulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/arial"
+                            android:padding="@dimen/padding_text_view_item_comanda"
+                            android:textColor="@color/colorPrimary"
+                            android:text="1"
+                            android:textSize="@dimen/text_size_text_view_descripcion_item_comanda"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/textViewDescripcion"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/arial"
+                            android:padding="@dimen/padding_text_view_item_comanda"
+                            android:text="Ensalada de la casa"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/text_size_text_view_descripcion_item_comanda"
+                            app:layout_constraintStart_toEndOf="@id/textViewCantidadArticulo"
+                            app:layout_constraintEnd_toStartOf="@+id/constraintContentPrecio"
+                            app:layout_constraintTop_toTopOf="@id/constraintContentPrecio" />
+
+                        <android.support.constraint.ConstraintLayout
+                            android:id="@+id/constraintContentPrecio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            app:layout_constraintTop_toTopOf="@id/textViewDescripcion"
+                            app:layout_constraintEnd_toEndOf="parent">
+
+                            <TextView
+                                android:id="@+id/textViewSignoMoneda"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/arial"
+                                android:text="@string/signo_moneda"
+                                android:textSize="@dimen/text_size_text_view_descripcion_item_comanda"
+                                android:textColor="@color/colorPrimary"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintRight_toLeftOf="@+id/textViewPrecio"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/textViewPrecio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/arial"
+                                android:textSize="@dimen/text_size_text_view_descripcion_item_comanda"
+                                android:gravity="center_vertical|end"
+                                android:textColor="@color/colorPrimary"
+                                android:padding="@dimen/padding_text_view_item_comanda"
+                                android:text="00000.00"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                        </android.support.constraint.ConstraintLayout>
+
+                    </android.support.constraint.ConstraintLayout>
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:id="@+id/rippleEditarArticuloComanda"
+                    style="@style/RippleStyleBlue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/padding_top_bottom_ripple_editar_articulo_item_comanda"
+                    android:paddingStart="@dimen/padding_start_end_ripple_editar_articulo_item_comanda"
+                    android:paddingEnd="@dimen/padding_start_end_ripple_editar_articulo_item_comanda"
+                    android:paddingBottom="@dimen/padding_top_bottom_ripple_editar_articulo_item_comanda"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:mrl_rippleDelayClick="false">
+
+                    <ImageView
+                        android:layout_width="@dimen/width_image_view_ic_editar_item_comanda"
+                        android:layout_height="@dimen/height_image_view_ic_editar_item_comanda"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/ic_editar" />
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/rippleMostrarMasArticuloComanda"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_content_modificadores_notas_item_comanda"
+                style="@style/RippleStyleBlue"
+                android:layout_marginEnd="@dimen/margin_end_ripple_mostrar_mas_item_comanda"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contentPrecioDescripcion"
+                app:mrl_rippleDelayClick="false">
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/contentNotasModificadores"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toStartOf="@id/imageViewMostrarMas"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.codesgood.views.JustifiedTextView
+                            android:id="@+id/textViewModificadoresNormales"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hyphenationFrequency="none"
+                            android:breakStrategy="high_quality"
+                            android:fontFamily="@font/arial"
+                            android:padding="@dimen/padding_text_view_item_comanda"
+                            android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi at aut consequatur corporis dolores error excepturi, exercitationem expedita facere fuga fugiat illo incidunt ipsa ipsam libero modi mollitia nihil nisi nobis nulla pariatur possimus provident quia quod reiciendis repellat repellendus sapiente sequi sint suscipit tempore unde veritatis vero voluptate."
+                            android:textColor="@color/colorSubText"
+                            android:textColorHint="@color/colorSubText"
+                            android:textColorLink="@color/colorSubText"
+                            android:textSize="@dimen/text_size_text_view_modificadores_item_comanda"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/reciclerViewExtrasLista"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            tools:itemCount="6"
+                            tools:layoutManager="android.support.v7.widget.GridLayoutManager"
+                            app:layout_constraintTop_toBottomOf="@id/textViewModificadoresNormales"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/textViewTituloNotas"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/arial"
+                            android:padding="@dimen/padding_text_view_item_comanda"
+                            android:text="Notas: "
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorNegro"
+                            android:textSize="@dimen/text_size_text_view_modificadores_item_comanda"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/reciclerViewExtrasLista" />
+
+                        <TextView
+                            android:id="@+id/textViewNotas"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hyphenationFrequency="none"
+                            android:breakStrategy="simple"
+                            android:ellipsize="none"
+                            android:fontFamily="@font/arial"
+                            android:padding="@dimen/padding_text_view_item_comanda"
+                            android:justificationMode="inter_word"
+                            android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi at aut consequatur corporis dolores error excepturi, exercitationem expedita facere fuga fugiat illo incidunt ipsa ipsam libero modi mollitia nihil nisi nobis nulla pariatur possimus provident quia quod reiciendis repellat repellendus sapiente sequi sint suscipit tempore unde veritatis vero voluptate."
+                            android:textColor="@color/colorSubText"
+                            android:textColorHint="@color/colorSubText"
+                            android:textColorLink="@color/colorSubText"
+                            android:textSize="@dimen/text_size_text_view_modificadores_item_comanda"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/textViewTituloNotas"
+                            app:layout_constraintTop_toBottomOf="@id/reciclerViewExtrasLista" />
+
+
+
+                    </android.support.constraint.ConstraintLayout>
+
+                    <ImageView
+                        android:id="@+id/imageViewTransparentText"
+                        android:layout_width="@dimen/width_image_view_transparent_text_item_comanda"
+                        android:layout_height="0dp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="@id/contentNotasModificadores"
+                        app:layout_constraintEnd_toStartOf="@id/imageViewMostrarMas"
+                        app:layout_constraintTop_toTopOf="@id/contentNotasModificadores"
+                        app:srcCompat="@drawable/background_gradient_comanda_articulo_mostrar_mas" />
+
+                    <ImageView
+                        android:id="@+id/imageViewMostrarMas"
+                        android:layout_width="@dimen/width_image_view_mostrar_mas_icon_item_comanda"
+                        android:layout_height="@dimen/height_image_view_mostrar_mas_icon_item_comanda"
+                        android:layout_marginTop="@dimen/margin_top_image_view_mostrar_mas_icon_item_comanda"
+                        android:layout_marginEnd="@dimen/margin_end_image_view_mostrar_mas_icon_item_comanda"
+                        android:padding="0dp"
+                        android:scaleType="fitXY"
+                        android:tint="@color/colorPrimary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/dropdown_icon" />
+
+                    <!--<com.balysv.materialripple.MaterialRippleLayout-->
+                        <!--android:id="@+id/rippleMostrarMasArticuloComanda"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--app:layout_constraintEnd_toEndOf="parent"-->
+                        <!--app:layout_constraintTop_toBottomOf="@id/contentPrecioDescripcion">-->
+
+                        <!---->
+                    <!--</com.balysv.materialripple.MaterialRippleLayout>-->
+
+                </android.support.constraint.ConstraintLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/imageViewFadeDeleteItem"
+                android:background="@color/colorSelectedItemBlue"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/margin_end_image_view_fade_delete_item_comanda"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    <!--</com.balysv.materialripple.MaterialRippleLayout>-->
+
+    <View
+        android:id="@+id/dividerRight"
+        android:layout_width="@dimen/height_width_divider_item_comanda"
+        android:layout_height="0dp"
+        android:background="@color/colorDividerItemComanda"
+        android:layout_marginBottom="@dimen/margin_bottom_divider_right_item_comanda"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/dividerBottom"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_width_divider_item_comanda"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/margin_end_divider_bottom_item_comanda"
+        android:background="@color/colorDividerItemComanda"
+        app:layout_constraintEnd_toEndOf="@id/contentItemComanda"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/contentItemComanda"
+        app:layout_constraintTop_toBottomOf="@id/contentItemComanda" />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayoutAplicacion"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/item_aplicacion_padding_cardview">
+
+    <TextView
+        android:id="@+id/textViewInformacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descripcion de la información"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewItemAplicacion" />
+
+    <ImageView
+        android:id="@+id/imageViewItemAplicacion"
+        android:layout_width="@dimen/item_aplicacion_height_imagen"
+        android:layout_height="@dimen/item_aplicacion_height_imagen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background_generico" />
+
+    <TextView
+        android:id="@+id/textViewTituloAplicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Aplicacion chila"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/buttonDescargarAplicacion"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewArrowExpand"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/imageViewItemAplicacion"
+        app:layout_constraintTop_toTopOf="@+id/imageViewItemAplicacion" />
+
+    <Button
+        android:id="@+id/buttonDescargarAplicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Descargar"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewItemAplicacion"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTituloAplicacion"
+        app:layout_constraintStart_toStartOf="@+id/textViewTituloAplicacion" />
+
+    <ImageView
+        android:id="@+id/imageViewArrowExpand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewItemAplicacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewItemAplicacion"
+        app:srcCompat="@drawable/ic_keyboard_arrow_down" />
+</android.support.constraint.ConstraintLayout>

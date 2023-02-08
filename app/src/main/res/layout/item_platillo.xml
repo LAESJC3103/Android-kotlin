@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/vertical_margin_item_platillo"
+    android:layout_marginRight="@dimen/vertical_margin_item_platillo"
+    android:layout_marginBottom="@dimen/horintal_margin_item_platillo"
+    app:cardCornerRadius="@dimen/corner_radius_card_view_item_platillo"
+    app:cardElevation="@dimen/elevation_item_platillo">
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        style="@style/RippleStyleBlue"
+        app:mrl_rippleDelayClick="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/contentItemPlatillo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorDivider"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/imageViewImagenPlatillo"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_imagen_item_platillo"
+                android:background="@color/colorBlanco"
+                android:maxHeight="@dimen/height_imagen_item_platillo"
+                android:minHeight="@dimen/height_imagen_item_platillo"
+                android:padding="@dimen/padding_image_view_item_platillo"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/img_default_platillo" />
+
+            <View
+                android:id="@+id/guidelineFadeImagenPlatillo"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:visibility="invisible"
+                app:layout_constraintTop_toTopOf="@id/imageViewImagenPlatillo"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewImagenPlatillo"
+                app:layout_constraintStart_toStartOf="@id/imageViewImagenPlatillo"
+                app:layout_constraintEnd_toEndOf="@id/imageViewImagenPlatillo"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:alpha="@dimen/alpha_shadow_image_item_platillo"
+                android:background="@drawable/background_gradient_fade_articulo"
+                app:layout_constraintStart_toStartOf="@id/imageViewImagenPlatillo"
+                app:layout_constraintEnd_toEndOf="@id/imageViewImagenPlatillo"
+                app:layout_constraintTop_toTopOf="@id/guidelineFadeImagenPlatillo"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewImagenPlatillo"
+                android:layout_marginStart="@dimen/padding_image_view_item_platillo"
+                android:layout_marginEnd="@dimen/padding_image_view_item_platillo"
+                android:layout_marginBottom="@dimen/padding_image_view_item_platillo"/>
+
+            <TextView
+                android:id="@+id/textViewDescripcionPlatillo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arial"
+                android:gravity="center"
+                android:padding="@dimen/padding_textview_descripcion_item_platillo"
+                android:text="TextView TextView TextView TextView TextView TextView TextView TextView TextView "
+                android:textAllCaps="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageViewImagenPlatillo" />
+        </android.support.constraint.ConstraintLayout>
+    </com.balysv.materialripple.MaterialRippleLayout>
+</android.support.v7.widget.CardView>

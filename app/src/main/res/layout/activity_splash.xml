@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashActivity">
+
+    <ImageView
+        android:id="@+id/imageViewIconLogoPacific"
+        android:layout_width="@dimen/width_image_splash"
+        android:layout_height="@dimen/width_image_splash"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@id/textViewTituloPacificStart"
+        app:layout_constraintLeft_toLeftOf="@id/textViewTituloPacificStart"
+        app:layout_constraintRight_toRightOf="@id/textViewTituloPacificEnd"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/icono_pacific" />
+
+    <TextView
+        android:id="@+id/textViewTituloPacificStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo_pacific_start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/textViewTituloPacificEnd"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewIconLogoPacific" />
+
+    <TextView
+        android:id="@+id/textViewTituloPacificEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo_pacific_end"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTituloPacificStart"
+        app:layout_constraintLeft_toRightOf="@id/textViewTituloPacificStart"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewTituloPacificStart" />
+
+</android.support.constraint.ConstraintLayout>

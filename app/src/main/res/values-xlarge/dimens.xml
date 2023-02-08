@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">42dp</dimen>
+    <dimen name="activity_vertical_margin">42dp</dimen>
+    <dimen name="text_size">26sp</dimen>
+    <dimen name="text_size_toolbar">30sp</dimen>
+    <dimen name="text_size_hint">28sp</dimen>
+    <dimen name="radiusButton">4dp</dimen>
+    <dimen name="layoutItemPadding">10dp</dimen>
+    <dimen name="margin_toolbar_generic">18dp</dimen>
+
+    <!--Navigation Drawer dimensions -->
+    <dimen name="nav_header_height">140dp</dimen>
+    <dimen name="nav_header_prof_padding">50dp</dimen>
+    <dimen name="nav_header_subitem">25sp</dimen>
+    <dimen name="nav_item_icon_size">48dp</dimen>
+    <dimen name="width_nav_view">500dp</dimen>
+    <dimen name="nav_header_padding_image_view_icon_delfin">10dp</dimen>
+    <dimen name="nav_header_width_image_view_icon_delfin">60dp</dimen>
+    <dimen name="nav_header_height_image_view_icon_delfin">60dp</dimen>
+    <dimen name="nav_header_login_width_icon">230dp</dimen>
+    <dimen name="nav_header_login_height_icon">230dp</dimen>
+    <dimen name="nav_header_login_text_size">35sp</dimen>
+
+    <!--Toolbar-->
+    <dimen name="toolbar_icon_size">60dp</dimen>
+    <dimen name="width_toolbar_icon_size">35dp</dimen>
+    <dimen name="height_toolbar_icon_size">30dp</dimen>
+    <dimen name="height_divider_view_toolbar">4dp</dimen>
+    <fraction name="porcentajeToolvarDivisor">0.3</fraction>
+    <dimen name="width_image_view_icon_toolbar">50dp</dimen>
+    <dimen name="height_image_view_icon_toolbar">50dp</dimen>
+    <fraction name="procentaje_alpha_icon_toolbar">0.3</fraction>
+
+
+    <!--SPLASH ACTIVITY-->
+    <dimen name="width_image_splash">400dp</dimen>
+    <dimen name="text_size_logo_splash">60sp</dimen>
+
+    <!--LOGIN_COMANDERA ACTIVITY-->
+    <dimen name="login_image_size">380dp</dimen>
+    <dimen name="login_height_fotter">80dp</dimen>
+    <dimen name="button_login_margin_top">40dp</dimen>
+    <dimen name="app_bar_login_margin_right">105dp</dimen>
+    <dimen name="login_padding">70dp</dimen>
+    // login
+    <dimen name="withIconLogin">350dp</dimen>
+    <dimen name="heightIconLogin">250dp</dimen>
+    <dimen name="marginBottomIconLogin">80dp</dimen>
+    <dimen name="textSizeLogin">35sp</dimen>
+    <dimen name="textSizeIconLogin">35sp</dimen>
+    <dimen name="marginBottomTituloAppLogin">60dp</dimen>
+    <dimen name="paddingLeftEditTextLogin">10dp</dimen>
+    <dimen name="paddingRightEditTextLogin">10dp</dimen>
+    <dimen name="paddingTopBottomButtonLogin">5dp</dimen>
+    <dimen name="paddingLeftRightButtonLogin">50dp</dimen>
+    <dimen name="textSizeMarcaAgua">25sp</dimen>
+    <dimen name="widthIconInputEditTextLogin">50dp</dimen>
+    <dimen name="textSizeTituloAppLogin">50sp</dimen>
+    <dimen name="marginTopButtonLogin">50dp</dimen>
+    <dimen name="marginBottomButtonLogin">15dp</dimen>
+    <dimen name="paddingLayoutEditTextLogin">5dp</dimen>
+    <dimen name="marginTopEditTextInputLogin">30dp</dimen>
+    <dimen name="margin_bottom_footer">10dp</dimen>
+    <dimen name="toolbar_margin_align_login_left">46dp</dimen>
+    <dimen name="toolbar_margin_align_login_right">46dp</dimen>
+
+    <!--CONFIGURACION ACTIVITY-->
+    <dimen name="text_size_encabezado_seccion_configuracion">44sp</dimen>
+    <dimen name="padding_encabezado_seccion_configuracion">20dp</dimen>
+    <dimen name="text_size_icon_validacion_configuracion">50sp</dimen>
+    <dimen name="padding_entre_rows_configuracion">10dp</dimen>
+    <dimen name="margin_content_configuracion">42dp</dimen>
+
+    <!--APLICACIONES-->
+    <!--ListView aplicaciones-->
+    <dimen name="item_aplicacion_height_imagen">400dp</dimen>
+    <dimen name="item_aplicacion_corner_radius">8dp</dimen>
+    <dimen name="item_aplicacion_padding_cardview">20dp</dimen>
+    <dimen name="item_aplication_margin_top_bottom">10dp</dimen>
+    <dimen name="item_aplicacion_arrow_size">60sp</dimen>
+
+    <!--Custom alert-->
+    <dimen name="layout_custom_alert_margin">20dp</dimen>
+    <dimen name="layout_card_view_alert_margin">30dp</dimen>
+    <dimen name="card_corner_radius_alert_custom">4dp</dimen>
+    <dimen name="lblTextSizeTituloAlertCustom">38sp</dimen>
+    <dimen name="textViewnAlertMarginBottom">20dp</dimen>
+    <dimen name="lblTextSizeMensajeAlertCustom">30sp</dimen>
+    <dimen name="width_image_custom_alert">140dp</dimen>
+    <dimen name="height_image_custom_alert">140dp</dimen>
+    //StyleButton AlertiDialog
+    <dimen name="text_size_button_alerta_custom">30sp</dimen>
+    <dimen name="padding_left_right_button_alerta_custom">20dp</dimen>
+    <dimen name="padding_top_bottom_button_alerta_custom">10dp</dimen>
+    <dimen name="width_size_ic_credit_card">48dp</dimen>
+    <dimen name="height_size_ic_credit_card">42dp</dimen>
+
+    //Dimens itemArea
+    <dimen name="height_item_area">100dp</dimen>
+    <dimen name="corner_radius_card_view_item_area">2dp</dimen>
+    <dimen name="margin_bottom_item_area">20dp</dimen>
+    <dimen name="padding_item_area">20dp</dimen>
+    <dimen name="margin_vertical_item_area">10dp</dimen>
+    <dimen name="margin_horizontal_item_area_">20dp</dimen>
+    <dimen name="text_size_label_item_area">30sp</dimen>
+    <dimen name="elevation_item_area">10dp</dimen>
+    <dimen name="left_vertical_row_width_item_area">15dp</dimen>
+    <dimen name="image_view_width_icon_next_item_area">50dp</dimen>
+    <dimen name="image_view_height_icon_next_item_area">70dp</dimen>
+
+    //Dimens contentCarta
+    <dimen name="width_icono_carta">120dp</dimen>
+    <dimen name="height_icono_carta">100dp</dimen>
+    //Dimens itemCarta
+    <dimen name="height_item_carta">100dp</dimen>
+    <dimen name="corner_radius_card_view_item_carta">2dp</dimen>
+    <dimen name="margin_bottom_item_carta">20dp</dimen>
+    <dimen name="padding_item_carta">20dp</dimen>
+    <dimen name="margin_vertical_item_carta">10dp</dimen>
+    <dimen name="margin_horizontal_item_carta">20dp</dimen>
+    <dimen name="text_size_label_item_carta">30sp</dimen>
+    <dimen name="elevation_item_carta">10dp</dimen>
+    <dimen name="left_vertical_row_width_item_carta">15dp</dimen>
+    <dimen name="image_view_width_icon_next_item_carta">50dp</dimen>
+    <dimen name="image_view_height_icon_next_item_carta">70dp</dimen>
+
+
+    //Dimens contentMesa
+    <dimen name="vertical_margin_mesa">42dp</dimen>
+    <dimen name="corner_radius_cardview_content_mesas">2dp</dimen>
+    <dimen name="elevation_cardview_content_mesas">20dp</dimen>
+    <dimen name="padding_cabecera_mesas">10dp</dimen>
+    <dimen name="height_footer_divider_content_mesa">14dp</dimen>
+    <dimen name="padding_content_view">32dp</dimen>
+    <dimen name="width_image_view_platillo">380dp</dimen>
+    <dimen name="height_image_view_platillo">200dp</dimen>
+    <dimen name="width_image_button_agregar_nota">50dp</dimen>
+    //Dimens itemMesa
+    <dimen name="padding_textView_titulo_item_mesa">8dp</dimen>
+    <dimen name="vertical_margin_item_mesa">20dp</dimen>
+    <dimen name="horizontal_margin_item_area">20dp</dimen>
+    <dimen name="height_divider_footer_item_mesa">2dp</dimen>
+    <dimen name="appbar_padding_top">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="widht_image_view_estatus_mesa">50dp</dimen>
+
+    //Dimens fragment grupo
+    <dimen name="margin_sepator_content_grupo">16dp</dimen>
+    <dimen name="margin_vertical_fragment_grupo">32dp</dimen>
+    //Dimens itemPlatillo
+    <dimen name="height_imagen_item_platillo">200dp</dimen>
+    <dimen name="elevation_item_platillo">5dp</dimen>
+    <dimen name="corner_radius_card_view_item_platillo">2dp</dimen>
+    <dimen name="padding_textview_descripcion_item_platillo">10dp</dimen>
+    <dimen name="vertical_margin_item_platillo">10dp</dimen>
+    <dimen name="vertical_margin_tab_layout">10dp</dimen>
+    <dimen name="horintal_margin_item_platillo">20dp</dimen>
+    <dimen name="padding_image_view_item_platillo">10dp</dimen>
+    <item name="alpha_shadow_image_item_platillo" format="float" type="dimen">0.6</item>
+
+
+
+
+    //dimens content_comanda
+    <dimen name="horizontal_margin_content_comanda">32dp</dimen>
+    <dimen name="vertical_margin_content_comanda">25dp</dimen>
+    <dimen name="corner_radius_cardview_content_comanda">2dp</dimen>
+    <dimen name="elevation_carview_content_comanda">8dp</dimen>
+    <dimen name="width_view_divider_content_comanda">16dp</dimen>
+    <dimen name="text_size_total_content_comanda">44sp</dimen>
+    <dimen name="padding_button_aceptar">60dp</dimen>
+    <dimen name="padding_top_bottom_button_aceptar">15dp</dimen>
+    <dimen name="padding_total_comanda_content_comanda">20dp</dimen>
+    //dimens item_comanda
+    <dimen name="width_ic_minus_cantidad_item_comanda">36dp</dimen>
+    <dimen name="height_ic_minus_cantidad_item_comanda">44dp</dimen>
+    <dimen name="width_ic_plus_cantidad_item_comanda">36dp</dimen>
+    <dimen name="height_ic_plus_cantidad_item_comanda">40dp</dimen>
+    <dimen name="width_constraint_cantidad_item_comanda">140dp</dimen>
+    <dimen name="width_text_view_precio_item_comanda">160dp</dimen>
+    <dimen name="padding_text_view_item_comanda">5dp</dimen>
+    <dimen name="margin_separator_text_view_item_comanda">@dimen/activity_horizontal_margin</dimen>
+    <dimen name="height_content_modificadores_notas_item_comanda">40dp</dimen>
+    <dimen name="margin_start_end_content_item_comanda">20dp</dimen>
+    <dimen name="text_size_text_view_descripcion_item_comanda">30sp</dimen>
+    <dimen name="padding_top_bottom_ripple_editar_articulo_item_comanda">10dp</dimen>
+    <dimen name="padding_start_end_ripple_editar_articulo_item_comanda">20dp</dimen>
+    <dimen name="width_image_view_ic_editar_item_comanda">40dp</dimen>
+    <dimen name="height_image_view_ic_editar_item_comanda">30dp</dimen>
+    <dimen name="margin_end_ripple_mostrar_mas_item_comanda">15dp</dimen>
+    <dimen name="text_size_text_view_modificadores_item_comanda">23sp</dimen>
+    <dimen name="width_image_view_transparent_text_item_comanda">260dp</dimen>
+    <dimen name="width_image_view_mostrar_mas_icon_item_comanda">20dp</dimen>
+    <dimen name="height_image_view_mostrar_mas_icon_item_comanda">10dp</dimen>
+    <dimen name="margin_top_image_view_mostrar_mas_icon_item_comanda">20dp</dimen>
+    <dimen name="margin_end_image_view_mostrar_mas_icon_item_comanda">5dp</dimen>
+    <dimen name="margin_end_image_view_fade_delete_item_comanda">15dp</dimen>
+    <dimen name="height_width_divider_item_comanda">1dp</dimen>
+    <dimen name="margin_bottom_divider_right_item_comanda">10dp</dimen>
+    <dimen name="margin_top_divider_bottom_item_comanda">20dp</dimen>
+    <dimen name="margin_end_divider_bottom_item_comanda">20dp</dimen>
+    //item_nota
+    <item name="alpha_divider_right_item_nota_comanda" format="float" type="dimen">0.5</item>
+    <dimen name="width_item_nota_comanda">1dp</dimen>
+
+
+    //Dimens activity_modificador
+    <dimen name="margin_right_text_view_header_activity_modificador">20dp</dimen>
+    <dimen name="padding_ripple_button_cancelar_activity_modificador">5dp</dimen>
+    <dimen name="margin_bottom_activity_modificador">40dp</dimen>
+    <item name="posicion_view_division_total_activity_modificador" format="float" type="dimen">0.33</item>
+    <dimen name="text_size_total_activity_modificador">36sp</dimen>
+    <dimen name="margin_left_text_view_total_precio_activity_modificador">10dp</dimen>
+    <dimen name="padding_right_left_button_siguiente_activity_modificador">0dp</dimen>
+    <dimen name="height_divider_underline_activity_modificador">1dp</dimen>
+    <dimen name="margin_bottom_view_pager_activity_modificador">5dp</dimen>
+    <dimen name="width_image_view_boton_siguiente_activity_modificador">70dp</dimen>
+    <dimen name="height_image_view_boton_siguiente_activity_modificador">50dp</dimen>
+    //Dimens fragment_modificador
+    //Dimens item_modificador
+    <dimen name="min_height_content_item_modificador">55dp</dimen>
+    <dimen name="width_content_check_item_modificador">100dp</dimen>
+    <dimen name="padding_content_check_item_modificador">15dp</dimen>
+    <dimen name="width_image_view_radio_check_default_item_modificador">25dp</dimen>
+    <dimen name="height_image_view_radio_check_default_item_modificador">25dp</dimen>
+    <dimen name="width_text_view_cantidad_ripple_reset_cantidad_item_modificador">160dp</dimen>
+    <dimen name="margin_ripple_reset_cantidad_item_modificador">27dp</dimen>
+    <dimen name="padding_ripple_reset_cantidad_item_modificador">15dp</dimen>
+    <dimen name="height_divider_underline_item_modificador">1dp</dimen>
+    <dimen name="margin_right_item_modificador">0dp</dimen>
+
+
+    //Dimens DetalleArticuloComadna
+    <dimen name="width_imagen_platillo_detalle_articulo">400dp</dimen>
+    <dimen name="height_imagen_platillo_detalle_articulo">230dp</dimen>
+    <dimen name="padding_edit_text_notas_detalle_articulo">20dp</dimen>
+    <dimen name="width_imagen_riple_atras_detalle_articulo">70dp</dimen>
+    <item name="porcentaje_guide_line_underline_total_detalle_articulo" format="float" type="dimen">0.45</item>
+    <dimen name="text_size_total_detalle_articulo">35sp</dimen>
+    <dimen name="margin_left_content_cantidad_detalle_articulo">150dp</dimen>
+    <dimen name="width_button_menos_mas_cantidad_detalle_articulo">60dp</dimen>
+    <dimen name="text_size_button_mas_menos_cantidad_detalle_articulo">50sp</dimen>
+    <dimen name="min_width_button_menos_mas_cantidad_detalle_articulo">60dp</dimen>
+    <dimen name="height_divider_underline_total">1dp</dimen>
+
+    //Generic spinner
+    <!--dimen name="row_item_spinner_img_width">40dp</dimen-->
+    <dimen name="padding_right_img_row_item_spinner">10dp</dimen>
+    <dimen name="paddig_titulo_row_item_spinner">20dp</dimen>
+    <dimen name="text_size_titulo_row_item_spinner">44sp</dimen>
+    <dimen name="height_divider_row_item_spinner_titulo">4dp</dimen>
+    <dimen name="height_divider_row_item_spinner">2dp</dimen>
+    <dimen name="padding_left_hint_spinner">10dp</dimen>
+    <dimen name="lblSecondItemSpinner">32sp</dimen>
+
+    //Generic
+    <dimen name="width_divider_dark_alert_header">10dp</dimen>
+    <dimen name="height_divider_dark_alert_header">65dp</dimen>
+    <dimen name="width_divider_blanco_alert_header">25dp</dimen>
+    <dimen name="width_divider_accent_alert_header">25dp</dimen>
+    <dimen name="width_image_view_cerrar_alert_header">50dp</dimen>
+    <dimen name="height_image_view_cerrar_alert_header">60dp</dimen>
+    <dimen name="hegiht_view_bottom_line_alert_custom">10dp</dimen>
+    <dimen name="width_image_view_custom_snack_bar">70dp</dimen>
+
+    //Alpha disable percent
+    <item name="alpha_textinput_layout_disabled" format="float" type="dimen">0.5</item>
+    <item name="posicion_view_division_total" format="float" type="dimen">0.72</item>
+
+</resources>

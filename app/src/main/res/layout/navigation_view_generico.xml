@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.NavigationView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_view"
+    android:layout_width="@dimen/width_nav_view"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:fitsSystemWindows="true"
+    android:theme="@style/navdrawerStyle"
+    app:itemIconTint="@drawable/drawer_item"
+    app:itemTextColor="@drawable/drawer_item"
+    app:headerLayout="@layout/nav_header_generico"
+    app:menu="@menu/generico_drawer">
+
+</android.support.design.widget.NavigationView>

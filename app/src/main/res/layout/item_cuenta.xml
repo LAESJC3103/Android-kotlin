@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/min_height_content_item_modificador">
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/materialRippleLayout"
+        style="@style/RippleStyleBlue"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@id/dividerUnderline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:mrl_rippleDelayClick="false">
+
+        <LinearLayout
+            android:id="@+id/contentItemCuenta"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_selected_multiple_item_comanda"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/activity_vertical_margin">
+
+            <TextView
+                android:id="@+id/textViewDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/arial"
+                android:textColor="@color/colorNegro"
+                android:text="TEXT"
+                android:textAllCaps="true" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/constraintContentCheck"
+                    android:layout_width="@dimen/width_content_check_item_modificador"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_content_check_item_modificador"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imageViewRadioDefault"
+                        android:layout_width="@dimen/width_image_view_radio_check_default_item_modificador"
+                        android:layout_height="@dimen/height_image_view_radio_check_default_item_modificador"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_round_uncheck" />
+
+
+                </android.support.constraint.ConstraintLayout>
+
+
+            </android.support.constraint.ConstraintLayout>
+
+
+        </LinearLayout>
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    <View
+        android:id="@+id/dividerUnderline"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_divider_underline_item_modificador"
+        android:background="@color/colorButtonComanda"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+</android.support.constraint.ConstraintLayout>

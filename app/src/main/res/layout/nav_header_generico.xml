@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@null"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:id="@+id/imageViewBackGroundheader"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:contentDescription="@string/nav_header_desc"
+        app:layout_constraintBottom_toTopOf="@id/contentDividerLine"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/image_nav_header_generic" />
+
+    <ImageView
+        android:layout_marginTop="@dimen/nav_header_padding_image_view_icon_delfin"
+        android:layout_marginEnd="@dimen/nav_header_padding_image_view_icon_delfin"
+        android:layout_width="@dimen/nav_header_width_image_view_icon_delfin"
+        android:layout_height="@dimen/nav_header_height_image_view_icon_delfin"
+        app:srcCompat="@drawable/ic_delfin"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/nav_header_prof"
+        android:layout_width="@dimen/nav_header_prof_padding"
+        android:layout_height="@dimen/nav_header_prof_padding"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        app:layout_constraintBottom_toBottomOf="@id/textViewUserName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textViewUserName"
+        app:srcCompat="@drawable/ic_person_white" />
+
+
+    <TextView
+        android:id="@+id/textViewUserName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:text="@string/nav_header_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/contentDividerLine"
+        app:layout_constraintLeft_toRightOf="@+id/nav_header_prof"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/contentDividerLine">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineDividerToolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="@fraction/porcentajeToolvarDivisor" />
+
+        <View
+            android:id="@+id/viewDividerToolbar"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/height_divider_view_toolbar"
+            android:background="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineDividerToolbar"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:paddingLeft="@dimen/activity_horizontal_margin"-->
+        <!--android:paddingTop="@dimen/activity_vertical_margin"-->
+        <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
+        <!--android:paddingBottom="@dimen/activity_vertical_margin"-->
+        <!--android:text="@string/nav_header_subtitle"-->
+        <!--android:visibility="gone" />-->
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1f5ba5</color>
+    <color name="colorPrimaryDark">#00305B</color>
+    <color name="colorPrimaryDarkDisabled">#B300305B</color>
+    <color name="colorAccent">#41B7C4</color>
+    <color name="colorAccentDisabled">#B341B7C4</color>
+    <color name="colorStarGradiantSplash">#1f5ba5</color>
+    <color name="colorCenterGradiantSplash">#00305b</color>
+    <color name="colorEndGradiantSplash">#003972</color>
+    <color name="colorAccentLogin">#FFFFFF</color>
+    <color name="textColorNavBar">#FFFFFF</color>
+    <color name="colorDesplegableArrow">#000000</color>
+    <color name="backgroundColorNavigationView">#FFFFFF</color>
+    <color name="colorError">#cc181e</color>
+    <color name="colorSuccess">#559900</color>
+    <color name="colorWarning">#F4C20D</color>
+    <color name="colorSecondItemSpinner">#AFAFAF</color>
+    <color name="colorBlanco">#FFFFFF</color>
+    <color name="colorDisableTextButton">#D2D2D2</color>
+    <color name="colorEncabezadoSeccionConfiguracion">#B3FFFFFF</color>
+    <color name="colorTituloCustomAlertDialog">#000000</color>
+    <color name="colorDivider">#0082CA</color>
+    <color name="dividertoolbar">#41b7c4 </color>
+    <color name="dividerCuenta">#8000305B </color>
+    <color name="colorItemIcon">#FF000000</color>
+    <color name="colorSelectedItemBlue">#400082CA</color>
+    <color name="colorSelectedItemWhite">#33FFFFFF</color>
+    <color name="colorButtonComanda">#1190c8</color>
+    <color name="colorButtonComandaFinal">#1f5ba5</color>
+    <color name="colorButtonComandaDisabled">#B31190c8</color>
+    <color name="colorButtonComandaFinalDisabled">#B31f5ba5</color>
+    <color name="colorButtonLogin">#41B7C4</color>
+    <color name="colorButtonLoginFinal">#1190c8</color>
+    <color name="colorButtonLoginDisabled">#B341b7c4</color>
+    <color name="colorButtonLoginFinalDisabled">#B31190c8</color>
+    <color name="colorNegro">#000</color>
+    <color name="colorSubText">#575756</color>
+    <color name="colorDividerItemComanda">#dadada</color>
+</resources>

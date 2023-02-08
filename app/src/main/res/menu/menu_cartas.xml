@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="pacificsoft.pscomandera.CartasActivity">
+    <item android:id="@+id/action_carrito"
+        android:icon="@drawable/carrito"
+        android:title="@string/title_menu_toolbar_carrito"
+        app:showAsAction="always" />
+</menu>

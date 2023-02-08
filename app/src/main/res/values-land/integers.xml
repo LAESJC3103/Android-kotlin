@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="columnsGridViewAreas">1</integer>
+    <integer name="columnsGridViewMesas">2</integer>
+    <integer name="columnsGridViewCartas">1</integer>
+    <integer name="columnsGridViewPlatillos">2</integer>
+    <integer name="columnsGridViewComanda">1</integer>
+    <integer name="munLinesDetalleArticulo">1</integer>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <!--<item-->
+            <!--android:id="@+id/nav_mas_aplicaciones"-->
+            <!--android:icon="@drawable/ic_android_menu_drawer"-->
+            <!--android:title="@string/nav_drawer_mas_aplicaciones"/>-->
+        <!--<item-->
+            <!--android:id="@+id/nav_contactanos"-->
+            <!--android:icon="@drawable/ic_perm_phone_msg_menu_drawer"-->
+            <!--android:title="@string/nav_drawer_contactanos"-->
+            <!--android:checked="true"/>-->
+        <item
+            android:id="@+id/nav_acerca_de"
+            android:icon="@drawable/ic_informacion"
+            android:title="@string/nav_drawer_acerca_de"/>
+    </group>
+
+
+</menu>

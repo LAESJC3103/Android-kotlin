@@ -1,0 +1,30 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="@dimen/width_toolbar_icon_size"
+    android:height="@dimen/height_toolbar_icon_size"
+    android:viewportWidth="3250"
+    android:viewportHeight="3090">
+  <path
+      android:pathData="M155,3033c-75,-39 -114,-105 -115,-191 -1,-180 212,-277 347,-159 113,99 93,280 -39,348 -47,24 -150,25 -193,2z"
+      android:fillColor="#41b7c4"
+      android:strokeColor="#00000000"/>
+  <path
+      android:pathData="M954,3018c-77,-53 -109,-143 -84,-238 15,-57 80,-124 135,-139 55,-15 2024,-15 2078,0 21,6 56,26 77,45 105,95 87,272 -35,341l-40,23 -1041,0 -1042,0 -48,-32z"
+      android:fillColor="#41b7c4"
+      android:strokeColor="#00000000"/>
+  <path
+      android:pathData="M153,1685c-32,-16 -61,-41 -79,-67 -26,-37 -29,-50 -29,-119 0,-70 3,-82 30,-121 44,-63 103,-90 187,-86 82,4 139,39 176,108 34,64 29,160 -12,218 -36,52 -112,92 -176,92 -29,0 -65,-9 -97,-25z"
+      android:fillColor="#41b7c4"
+      android:strokeColor="#00000000"/>
+  <path
+      android:pathData="M985,1691c-49,-22 -99,-77 -115,-126 -30,-91 16,-208 99,-252l45,-23 1042,2 1042,3 43,30c101,72 118,218 36,312 -68,78 11,73 -1132,73 -965,0 -1022,-1 -1060,-19z"
+      android:fillColor="#41b7c4"
+      android:strokeColor="#00000000"/>
+  <path
+      android:pathData="M170,444c-78,-34 -130,-111 -130,-194 0,-127 83,-210 210,-210 127,0 210,83 210,210 0,147 -157,252 -290,194z"
+      android:fillColor="#41b7c4"
+      android:strokeColor="#00000000"/>
+  <path
+      android:pathData="M996,445c-158,-56 -183,-277 -42,-372l48,-33 1042,0 1042,0 45,29c59,37 89,86 96,156 10,100 -53,199 -144,224 -26,7 -364,11 -1043,11 -829,-1 -1012,-3 -1044,-15z"
+      android:fillColor="#41b7c4"
+      android:strokeColor="#00000000"/>
+</vector>

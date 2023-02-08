@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/view_container"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:id="@+id/nav_header_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/image_nav_header_generic"
+        app:layout_constraintBottom_toTopOf="@id/contentDividerLine"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/contentDividerLine"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:layout_marginTop="@dimen/nav_header_padding_image_view_icon_delfin"
+            android:layout_marginEnd="@dimen/nav_header_padding_image_view_icon_delfin"
+            android:layout_width="@dimen/nav_header_width_image_view_icon_delfin"
+            android:layout_height="@dimen/nav_header_height_image_view_icon_delfin"
+            app:srcCompat="@drawable/ic_delfin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/contentDividerLine">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineDividerToolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="@fraction/porcentajeToolvarDivisor" />
+
+        <View
+            android:id="@+id/viewDividerToolbar"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/height_divider_view_toolbar"
+            android:background="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/guidelineDividerToolbar"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

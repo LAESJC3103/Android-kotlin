@@ -1,0 +1,433 @@
+<resources xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorBlanco</item>
+        <item name="android:windowBackground">@drawable/background_generico</item>
+
+        <!-- Color del hint textInputLayout-->
+        <item name="android:textColorHint">@color/colorBlanco</item>
+        <!-- Color del texto en general textInputLayout-->
+        <!--item name="android:textColorPrimary">@drawable/text_color_disabled_generico</item-->
+        <!-- Color de texto TextInputLayout underline -->
+        <item name="android:textColorPrimary">@drawable/color_status_generico</item>
+        <item name="colorControlNormal">@color/colorBlanco</item>
+        <!-- Color de underline cuando se esta escribiendo TextInputLayou-->
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorBlanco</item>
+
+        <!--<item name="actionModeStyle">@style/YourActionModeStyle</item>-->
+        <item name="windowActionModeOverlay">false</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_arrow_back</item>
+
+        <item name="alertDialogTheme">@style/AppAlertDialog</item>
+
+        <item name="android:fontFamily">@font/raleway_font_family</item>
+        <!--<item name="actionMenuTextColor">@color/white</item>-->
+
+    </style>
+
+
+    <style name="ContentThemeMesa" parent="AppTheme">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:windowBackground">@color/colorBlanco</item>
+        <item name="colorAccent">@color/colorDivider</item>
+
+        <item name="android:textColorPrimary">@color/colorPrimary</item>
+        <item name="colorControlNormal">@color/colorNegro</item>
+        <!-- Color de underline cuando se esta escribiendo TextInputLayou-->
+        <item name="colorControlActivated">@color/colorNegro</item>
+        <item name="colorControlHighlight">@color/colorNegro</item>
+        <item name="android:textColorHint">@color/colorNegro</item>
+
+    </style>
+    <style name="ContentThemeDetalleArticulo" parent="AppTheme">
+        <item name="android:textColorPrimary">@color/colorBlanco</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <!-- Color de underline cuando se esta escribiendo TextInputLayou-->
+        <item name="colorControlActivated">@color/colorPrimaryDark</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+        <item name="android:textColorHint">@color/colorPrimary</item>
+    </style>
+
+    <style name="ContentThemeComanda" parent="AppTheme">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:windowBackground">@color/colorBlanco</item>
+        <item name="colorAccent">@color/colorDivider</item>
+
+        <item name="android:textColorPrimary">@color/colorPrimary</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <!-- Color de underline cuando se esta escribiendo TextInputLayou-->
+        <item name="colorControlActivated">@color/colorPrimaryDark</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+        <item name="android:textColorHint">@color/colorPrimary</item>
+
+    </style>
+
+    <style name="ContentThemeModificadores" parent="AppTheme">
+        <item name="android:textColor">@color/colorNegro</item>
+        <item name="android:windowBackground">@color/colorBlanco</item>
+        <item name="colorAccent">@color/colorDivider</item>
+
+        <item name="android:textColorPrimary">@color/colorPrimary</item>
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <!-- Color de underline cuando se esta escribiendo TextInputLayou-->
+        <item name="colorControlActivated">@color/colorPrimaryDark</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+        <item name="android:textColorHint">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/arial</item>
+    </style>
+
+    <style name="TooltipModificadoresTopHeader">
+        <item name="android:textColor">@color/colorBlanco</item>
+        <item name="backgroundColor">@color/colorPrimary</item>
+        <item name="cornerRadius">5dp</item>
+        <!--        <item name="arrowWidth">48dp</item>
+                <item name="arrowHeight">48dp</item>-->
+    </style>
+
+    <style name="TooltipModificadoresBottomHeader">
+        <item name="android:textColor">@color/colorBlanco</item>
+        <item name="backgroundColor">@color/colorDivider</item>
+        <item name="cornerRadius">5dp</item>
+        <!--        <item name="arrowWidth">48dp</item>
+                <item name="arrowHeight">48dp</item>-->
+    </style>
+
+    <style name="AppAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- To tint the buttons -->
+        <item name="android:textColor">@color/colorPrimary</item>
+        <!--<item name="android:buttonStyle">@style/MyButton</item>-->
+
+        <item name="buttonBarPositiveButtonStyle">@style/btnPrimaryAceptarAlertCustom</item>
+        <item name="buttonBarNeutralButtonStyle">@style/btnPrimaryCancelAlertCustom</item>
+        <!--<item name="buttonBarNegativeButtonStyle">@style/YoursTheme</item>-->
+        <!--<item name="buttonBarNeutralButtonStyle">@style/YoursTheme</item>-->
+    </style>
+
+    <style name="Base.Widget.AppCompat.ActionMode" parent="">
+        <item name="background">@android:color/transparent</item>
+        <item name="backgroundSplit">?attr/actionModeSplitBackground</item>
+        <item name="height">?attr/actionBarSize</item>
+        <item name="titleTextStyle">@style/Toolbar.TitleText</item>
+        <item name="subtitleTextStyle">@style/TextAppearance.AppCompat.Widget.ActionMode.Subtitle</item>
+        <item name="closeItemLayout">@layout/abc_action_mode_close_item_material</item>
+        <item name="windowActionModeOverlay">false</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_arrow_back</item>
+    </style>
+
+    <style name="RippleStyleWhite">
+        <item name="mrl_rippleOverlay">true</item>
+        <item name="mrl_rippleColor">@color/colorSelectedItemWhite</item>
+        <item name="mrl_rippleHover">true</item>
+    </style>
+
+    <style name="RippleStyleBlue" parent="RippleStyleWhite">
+        <item name="mrl_rippleColor">@color/colorSelectedItemBlue</item>
+    </style>
+
+    <style name="navdrawerStyle" parent="AppTheme">
+        <item name="android:windowBackground">@color/colorPrimary</item>
+    </style>
+
+
+    <style name="button_content_comanda" parent="Widget.MaterialComponents.Button">
+        <item name="colorAccent">@color/colorDivider</item>
+        <item name="android:textSize">@dimen/text_size</item>
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--TextColorNavBar-->
+    <style name="NavBar" parent="AppTheme">
+        <item name="android:textColorPrimary">@color/textColorNavBar</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">@dimen/text_size_toolbar</item>
+    </style>
+
+    <style name="MyCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/text_size</item>
+    </style>
+
+    <style name="hintStyleEncabezadoConfiguracion">
+        <item name="android:textSize">@dimen/text_size_encabezado_seccion_configuracion</item>
+        <item name="android:textColor">@color/colorEncabezadoSeccionConfiguracion</item>
+        <item name="android:paddingLeft">@dimen/padding_left_hint_spinner</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:paddingTop">@dimen/padding_encabezado_seccion_configuracion</item>
+        <item name="android:paddingBottom">@dimen/padding_encabezado_seccion_configuracion</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="LoginTheme" parent="AppTheme">
+
+        <item name="colorControlNormal">@color/colorAccentLogin</item>
+        <item name="colorControlActivated">@color/colorAccentLogin</item>
+        <item name="colorControlHighlight">@color/colorAccentLogin</item>
+        <item name="android:textColor">@color/colorAccentLogin</item>
+        <item name="android:textColorPrimary">@color/colorAccentLogin</item>
+        <item name="android:textColorHint">@color/colorAccentLogin</item>
+
+        <item name="android:windowBackground">@drawable/background_generico</item>
+
+
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_generico</item>
+        <item name="android:textSize">@dimen/text_size_logo_splash</item>
+    </style>
+
+    <style name="hintStyleTextInputLayout" parent="@android:style/TextAppearance">
+        <item name="android:textSize">@dimen/text_size_hint</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <style name="DrawerIconStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/colorPrimary</item>
+    </style>
+
+    <style name="AcercaDeBlueColorTextTextView" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorBlanco</item>
+    </style>
+
+    <style name="hintStyleSpinnerLabel">
+        <item name="android:textSize">@dimen/text_size_hint</item>
+        <item name="android:textColor">@drawable/color_status_generico</item>
+        <item name="android:paddingLeft">@dimen/padding_left_hint_spinner</item>
+    </style>
+
+    <style name="spinnerUnderlineColor">
+        <!-- Color when pressed -->
+        <item name="colorAccent">@color/colorPrimary</item>
+        <!-- Default color for the dropdown arrow and line -->
+        <item name="colorControlNormal">@color/colorBlanco</item>
+    </style>
+
+    <style name="styleLayoutItemSpinnerMain">
+        <item name="android:paddingLeft">@dimen/layoutItemPadding</item>
+        <item name="android:paddingRight">@dimen/layoutItemPadding</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:textColor">@color/colorBlanco</item>
+    </style>
+
+    <style name="styleLayoutItemSpinnerDropdown">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">@dimen/text_size</item>
+    </style>
+
+    <style name="styleLayoutItemSpinnerTituloDropdown">
+        <item name="android:textSize">@dimen/text_size_titulo_row_item_spinner</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:paddingLeft">@dimen/layoutItemPadding</item>
+        <item name="android:paddingRight">@dimen/layoutItemPadding</item>
+    </style>
+
+    <style name="hintItemStyleSpinner">
+        <item name="android:textColor">@color/colorBlanco</item>
+        <item name="android:textSize">@dimen/text_size</item>
+    </style>
+
+    <style name="lblSecondItemSpinner">
+        <item name="android:textSize">@dimen/lblSecondItemSpinner</item>
+        <item name="android:textColor">@color/colorSecondItemSpinner</item>
+    </style>
+
+    <style name="btnLogin">
+        <item name="android:paddingTop">@dimen/paddingTopBottomButtonLogin</item>
+        <item name="android:paddingBottom">@dimen/paddingTopBottomButtonLogin</item>
+        <item name="android:paddingLeft">@dimen/paddingLeftRightButtonLogin</item>
+        <item name="android:paddingRight">@dimen/paddingLeftRightButtonLogin</item>
+        <item name="android:textColor">@color/colorBlanco</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/background_button_login_radius</item>
+        <item name="android:layout_marginBottom">@dimen/marginBottomButtonLogin</item>
+        <item name="android:layout_marginTop">@dimen/marginTopButtonLogin</item>
+        <item name="android:textStyle">normal</item>
+        <item name="mrl_rippleColor">@color/colorSelectedItemBlue</item>
+    </style>
+
+    <!--Alert Dialog-->
+    <style name="btnErrorCancelAlert">
+        <item name="android:textSize">@dimen/text_size_button_alerta_custom</item>
+        <item name="android:paddingLeft">@dimen/padding_left_right_button_alerta_custom</item>
+        <item name="android:paddingRight">@dimen/padding_left_right_button_alerta_custom</item>
+        <item name="android:paddingTop">@dimen/padding_top_bottom_button_alerta_custom</item>
+        <item name="android:paddingBottom">@dimen/padding_top_bottom_button_alerta_custom</item>
+        <item name="android:textColor">@color/colorError</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@color/colorBlanco</item>
+    </style>
+
+    <style name="btnErrorAceptarAlert">
+        <item name="android:textSize">@dimen/text_size_button_alerta_custom</item>
+        <item name="android:paddingLeft">@dimen/padding_left_right_button_alerta_custom</item>
+        <item name="android:paddingRight">@dimen/padding_left_right_button_alerta_custom</item>
+        <item name="android:paddingTop">@dimen/padding_top_bottom_button_alerta_custom</item>
+        <item name="android:paddingBottom">@dimen/padding_top_bottom_button_alerta_custom</item>
+        <item name="android:textColor">@color/colorBlanco</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/boton_error_radius</item>
+    </style>
+
+
+    <style name="btnSuccessCancelAlert">
+        <item name="android:textSize">@dimen/text_size_button_alerta_custom</item>
+        <item name="android:paddingLeft">@dimen/padding_left_right_button_alerta_custom</item>
+        <item name="android:paddingRight">@dimen/padding_left_right_button_alerta_custom</item>
+        <item name="android:paddingTop">@dimen/padding_top_bottom_button_alerta_custom</item>
+        <item name="android:paddingBottom">@dimen/padding_top_bottom_button_alerta_custom</item>
+        <item name="android:textColor">@color/colorSuccess</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@color/colorBlanco</item>
+    </style>
+
+    <style name="btnSuccessAceptarAlert">
+        <item name="android:textSize">@dimen/text_size_button_alerta_custom</item>
+        <item name="android:paddingLeft">@dimen/padding_left_right_button_alerta_custom</item>
+        <item name="android:paddingRight">@dimen/padding_left_right_button_alerta_custom</item>
+        <item name="android:paddingTop">@dimen/padding_top_bottom_button_alerta_custom</item>
+        <item name="android:paddingBottom">@dimen/padding_top_bottom_button_alerta_custom</item>
+        <item name="android:textColor">@color/colorBlanco</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/boton_success_radius</item>
+    </style>
+
+    <style name="btnWarningCancelAlert">
+        <item name="android:textSize">@dimen/text_size_button_alerta_custom</item>
+        <item name="android:paddingLeft">@dimen/padding_left_right_button_alerta_custom</item>
+        <item name="android:paddingRight">@dimen/padding_left_right_button_alerta_custom</item>
+        <item name="android:paddingTop">@dimen/padding_top_bottom_button_alerta_custom</item>
+        <item name="android:paddingBottom">@dimen/padding_top_bottom_button_alerta_custom</item>
+        <item name="android:textColor">@color/colorWarning</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@color/colorBlanco</item>
+    </style>
+
+    <style name="btnWarningAceptarAlert">
+        <item name="android:textSize">@dimen/text_size_button_alerta_custom</item>
+        <item name="android:paddingLeft">@dimen/padding_left_right_button_alerta_custom</item>
+        <item name="android:paddingRight">@dimen/padding_left_right_button_alerta_custom</item>
+        <item name="android:paddingTop">@dimen/padding_top_bottom_button_alerta_custom</item>
+        <item name="android:paddingBottom">@dimen/padding_top_bottom_button_alerta_custom</item>
+        <item name="android:textColor">@color/colorBlanco</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/boton_warning_radius</item>
+    </style>
+
+    <!--<style name="btnPrimaryCancelAlert">-->
+        <!--<item name="android:textSize">@dimen/text_size_button_alerta_custom</item>-->
+        <!--<item name="android:paddingLeft">@dimen/padding_left_right_button_alerta_custom</item>-->
+        <!--<item name="android:paddingRight">@dimen/padding_left_right_button_alerta_custom</item>-->
+        <!--<item name="android:paddingTop">@dimen/padding_top_bottom_button_alerta_custom</item>-->
+        <!--<item name="android:paddingBottom">@dimen/padding_top_bottom_button_alerta_custom</item>-->
+        <!--<item name="android:textColor">@color/colorPrimary</item>-->
+        <!--<item name="android:textAllCaps">false</item>-->
+        <!--<item name="android:layout_gravity">center</item>-->
+        <!--<item name="android:background">@null</item>-->
+    <!--</style>-->
+
+    <!--<style name="btnPrimaryAceptarAlert">-->
+        <!--<item name="android:textSize">@dimen/text_size_button_alerta_custom</item>-->
+        <!--<item name="android:paddingLeft">@dimen/padding_left_right_button_alerta_custom</item>-->
+        <!--<item name="android:paddingRight">@dimen/padding_left_right_button_alerta_custom</item>-->
+        <!--<item name="android:paddingTop">@dimen/padding_top_bottom_button_alerta_custom</item>-->
+        <!--<item name="android:paddingBottom">@dimen/padding_top_bottom_button_alerta_custom</item>-->
+        <!--<item name="android:textColor">@color/colorBlanco</item>-->
+        <!--<item name="android:textAllCaps">false</item>-->
+        <!--<item name="android:layout_gravity">center</item>-->
+        <!--<item name="android:background">@drawable/boton_primary_radius</item>-->
+    <!--</style>-->
+
+    <style name="btnPrimaryCancelAlertCustom">
+        <item name="android:textSize">@dimen/text_size_button_alerta_custom</item>
+        <item name="android:paddingLeft">@dimen/padding_left_right_button_alerta_custom</item>
+        <item name="android:paddingRight">@dimen/padding_left_right_button_alerta_custom</item>
+        <item name="android:paddingTop">@dimen/padding_top_bottom_button_alerta_custom</item>
+        <item name="android:paddingBottom">@dimen/padding_top_bottom_button_alerta_custom</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/raleway_semi_bold_fix</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="btnPrimaryAceptarAlertCustom">
+        <item name="android:textSize">@dimen/text_size_button_alerta_custom</item>
+        <item name="android:paddingLeft">@dimen/padding_left_right_button_alerta_custom</item>
+        <item name="android:paddingRight">@dimen/padding_left_right_button_alerta_custom</item>
+        <item name="android:paddingTop">@dimen/padding_top_bottom_button_alerta_custom</item>
+        <item name="android:paddingBottom">@dimen/padding_top_bottom_button_alerta_custom</item>
+        <item name="android:textColor">@color/colorBlanco</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/raleway_semi_bold_fix</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/boton_primary_alert_radius</item>
+    </style>
+
+    <style name="lblTituloAlertCustom">
+        <item name="android:textSize">@dimen/lblTextSizeTituloAlertCustom</item>
+        <item name="android:textColor">@color/colorBlanco</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/raleway_semi_bold_fix</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+
+    <style name="lblMensajeAlertCustom">
+        <item name="android:textSize">@dimen/lblTextSizeMensajeAlertCustom</item>
+        <item name="android:textColor">@color/colorTituloCustomAlertDialog</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_marginBottom">@dimen/textViewnAlertMarginBottom</item>
+    </style>
+    <!--Alert Dialog-->
+
+    <style name="btnPrimary">
+        <!--item name="android:paddingTop">@dimen/paddingTopBottomButton</item>
+        <item name="android:paddingBottom">@dimen/paddingTopBottomButton</item-->
+        <item name="android:textColor">@drawable/boton_primary_text_color</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/boton_primary_radius</item>
+    </style>
+
+    <style name="textViewItemArea" parent="@android:style/TextAppearance.Widget.TextView">
+        <item name="android:textSize">@dimen/text_size_label_item_area</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:gravity">center_vertical|start</item>
+    </style>
+
+    <style name="textViewItemCarta" parent="@android:style/TextAppearance.Widget.TextView">
+        <item name="android:textSize">@dimen/text_size_label_item_carta</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:gravity">center_vertical|start</item>
+    </style>
+
+</resources>

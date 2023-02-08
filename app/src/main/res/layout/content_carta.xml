@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".CartaActivity"
+    tools:showIn="@layout/app_bar_carta">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineMarginLeftParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/padding_content_view" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineMarginRightParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/padding_content_view" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineMarginTopParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/padding_content_view" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineMarginBottomParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/padding_content_view" />
+
+    <!--TextView
+        android:id="@+id/tituloActividad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_activity_carta"
+        app:layout_constraintEnd_toEndOf="@id/guidelineMarginRightParent"
+        app:layout_constraintStart_toStartOf="@id/guidelineMarginLeftParent" /-->
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/imageViewIconoCarta"
+        app:layout_constraintEnd_toEndOf="@id/guidelineMarginRightParent"
+        app:layout_constraintStart_toStartOf="@id/guidelineMarginLeftParent"
+        app:layout_constraintTop_toBottomOf="@id/guidelineMarginTopParent"
+        android:layout_marginBottom="@dimen/margin_horizontal_item_carta">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewCartas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:itemCount="9"
+                tools:layoutManager="android.support.v7.widget.GridLayoutManager"
+                tools:listitem="@layout/item_carta"
+                tools:orientation="vertical"
+                tools:scrollbars="none"
+                tools:spanCount="@integer/columnsGridViewCartas" />
+        </ScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+    <ImageView
+        android:id="@+id/imageViewIconoCarta"
+        android:layout_width="@dimen/width_icono_carta"
+        android:layout_height="@dimen/height_icono_carta"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineMarginBottomParent"
+        app:layout_constraintEnd_toEndOf="@id/guidelineMarginRightParent"
+        android:src="@drawable/carta"/>
+
+</android.support.constraint.ConstraintLayout>

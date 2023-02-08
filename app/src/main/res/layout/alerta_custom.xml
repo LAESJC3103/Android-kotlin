@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/layout_custom_alert_margin"
+    android:layout_marginRight="@dimen/layout_custom_alert_margin"
+    android:gravity="center_vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                app:cardBackgroundColor="@null"
+                app:cardCornerRadius="@dimen/card_corner_radius_alert_custom">
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/contentHeader"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toTopOf="@+id/constraintContentBody"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <android.support.constraint.ConstraintLayout
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:background="@color/colorDivider"
+                            app:layout_constraintBottom_toBottomOf="@id/rippleCancelar"
+                            app:layout_constraintEnd_toStartOf="@id/dividerDark"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/rippleCancelar">
+
+                            <TextView
+                                android:id="@+id/lblTituloAlertCustom"
+                                style=""
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="Mesa 01"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </android.support.constraint.ConstraintLayout>
+
+                        <View
+                            android:id="@+id/dividerDark"
+                            android:layout_width="@dimen/width_divider_dark_alert_header"
+                            android:layout_height="@dimen/height_divider_dark_alert_header"
+                            android:background="@color/colorPrimaryDark"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toStartOf="@id/dividerAccent"
+                            app:layout_constraintTop_toTopOf="@id/rippleCancelar" />
+                        <View
+                            android:id="@+id/dividerAccent"
+                            android:layout_width="@dimen/width_divider_accent_alert_header"
+                            android:layout_height="0dp"
+                            android:background="@color/colorDivider"
+                            app:layout_constraintEnd_toStartOf="@id/dividerBlanco"
+                            app:layout_constraintTop_toTopOf="@id/rippleCancelar"
+                            app:layout_constraintBottom_toBottomOf="@id/rippleCancelar"/>
+                        <View
+                            android:id="@+id/dividerBlanco"
+                            android:layout_width="@dimen/width_divider_blanco_alert_header"
+                            android:layout_height="0dp"
+                            app:layout_constraintEnd_toStartOf="@id/rippleCancelar"
+                            app:layout_constraintTop_toTopOf="@id/rippleCancelar"
+                            app:layout_constraintBottom_toBottomOf="@id/rippleCancelar"/>
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:id="@+id/rippleCancelar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorAccent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+                            <ImageView
+                                android:layout_width="@dimen/width_image_view_cerrar_alert_header"
+                                android:layout_height="@dimen/height_image_view_cerrar_alert_header"
+                                android:scaleType="fitXY"
+                                app:srcCompat="@drawable/ic_close_black"
+                                android:tint="@color/colorBlanco"/>
+
+                        </com.balysv.materialripple.MaterialRippleLayout>
+
+                    </android.support.constraint.ConstraintLayout>
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/constraintContentBody"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/layout_custom_alert_margin"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/contentHeader">
+
+                        <ImageView
+                            android:id="@+id/imgIconMsj"
+                            android:layout_width="@dimen/width_image_custom_alert"
+                            android:layout_height="@dimen/height_image_custom_alert"
+                            android:layout_gravity="center_horizontal"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                             />
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/lblTituloAlertCustom"-->
+                            <!--style="@style/lblTituloAlertCustom"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="Error de impresora"-->
+                            <!--app:layout_constraintEnd_toEndOf="parent"-->
+                            <!--app:layout_constraintStart_toStartOf="parent"-->
+                            <!--app:layout_constraintTop_toBottomOf="@+id/imgIconMsj" />-->
+
+                        <TextView
+                            android:id="@+id/lblMsjAlertCustom"
+                            style="@style/lblMensajeAlertCustom"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="La impresora se encuentra apagada o fuera del alcance, por favor revise el dispositivo."
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imgIconMsj" />
+
+
+                    </android.support.constraint.ConstraintLayout>
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/constraintContentFooterButtom"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintContentBody"
+                        app:layout_constraintBottom_toTopOf="@id/viewBottomLine"
+                        android:layout_marginBottom="@dimen/layout_custom_alert_margin">
+
+                        <Button
+                            android:id="@+id/btnCancelarPopup"
+                            style=""
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Cancelar"
+                            android:layout_marginStart="@dimen/layout_custom_alert_margin"
+                            android:layout_marginEnd="@dimen/layout_custom_alert_margin"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@+id/btnAceptarPopup"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Button
+                            android:id="@+id/btnAceptarPopup"
+                            style=""
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Buscar impresora"
+                            android:layout_marginStart="@dimen/layout_custom_alert_margin"
+                            android:layout_marginEnd="@dimen/layout_custom_alert_margin"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@id/btnCancelarPopup"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                    <View
+                        android:id="@+id/viewBottomLine"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/hegiht_view_bottom_line_alert_custom"
+                        android:background="@color/colorAccent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+
+
+            </android.support.v7.widget.CardView>
+        </ScrollView>
+
+
+
+</RelativeLayout>

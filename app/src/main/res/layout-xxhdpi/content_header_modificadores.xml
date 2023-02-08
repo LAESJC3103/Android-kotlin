@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintContentHeader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorDivider">
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/contentHeaderClose"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_image_view_cerrar_alert_header"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/textViewTitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Nombre del producto"
+            android:textColor="@color/colorBlanco"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:maxLines="1"
+            android:fontFamily="@font/arial"
+            android:ellipsize="end"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/rippleCancelar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/rippleCancelar"
+            android:layout_width="@dimen/width_image_view_cerrar_alert_header"
+            android:layout_height="@dimen/height_image_view_cerrar_alert_header"
+            style="@style/RippleStyleBlue"
+            app:mrl_rippleDelayClick="false"
+            android:background="@color/colorAccent"
+            android:padding="@dimen/padding_ripple_button_cancelar_activity_modificador"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_close_black"
+                android:tint="@color/colorBlanco"
+                android:scaleType="fitXY"/>
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/contentSecondHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_image_view_cerrar_alert_header"
+        app:layout_constraintTop_toBottomOf="@id/contentHeaderClose"
+        android:background="@color/colorBlanco">
+
+        <TextView
+            android:id="@+id/textViewSubTitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_right_text_view_header_activity_modificador"
+            android:text="Proteina"
+            android:textColor="@color/colorDivider"
+            android:layout_marginStart="@dimen/activity_vertical_margin"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/textViewDescripcionMaximo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewDescripcionMaximo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_right_text_view_header_activity_modificador"
+            android:text="Max:"
+            android:textColor="@color/colorDivider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/textViewCantidadMaximo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewCantidadMaximo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_right_text_view_header_activity_modificador"
+            android:text="1-1"
+            android:textColor="@color/colorDivider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

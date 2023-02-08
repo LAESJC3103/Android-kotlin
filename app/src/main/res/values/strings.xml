@@ -1,0 +1,209 @@
+<resources>
+    <!-- Titulo de aplicacion -->
+    <string name="app_name">PS Comandera</string>
+    <!-- Titulo de aplicacion -->
+
+    <!-- Titulos de actiividad -->
+    <string name="title_activity_splash"> Splash </string>
+    <string name="title_activity_mas_aplicaciones"></string>
+    <string name="title_activity_contactanos"></string>
+    <string name="title_activity_acerca_de">Acerca de </string>
+    <string name="title_activity_configuracion">Configuración</string>
+    <string name="title_activity_areas">Áreas</string>
+    <string name="title_activity_mesas">Mesas</string>
+    <string name="title_activity_comanda">Comanda</string>
+    <string name="title_activity_grupo_carta">Grupos</string>
+    <string name="title_activity_carta">cartas</string>
+    <string name="title_activity_detalle_articulo_comanda">Detalles</string>
+    <string name="title_activity_login">Pacific Soft</string>
+    <!-- Titulos de actiividad -->
+
+
+    <!--SharedPrefrences - Cookies-->
+    <string name="SHPName">SharedPreferencesComandera</string>
+    <string name="SHPTAGUser">TAGUser</string>
+    <string name="SHPTAGAreaSeleccioanda">TAGAreaSeleccioanda</string>
+    <string name="SHPTAGMesaSeleccionada">TAGMesaSeleccionada</string>
+    <string name="SHPTAGCuentaSeleccionada">TAGCuentaSeleccionada</string>
+    <string name="SHPTAGCartaSeleccionada">TAGCartaSeleccionada</string>
+    <string name="SHPTAGComandasPendientes">TAGComandasPendientes</string>
+    <!--SharedPrefrences - Cookies-->
+
+    <!-- LoginComandera -->
+    <string name="prompt_username">Usuario</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="action_sign_in">Ingresar</string>
+    <string name="action_sign_in_short">Ingresar</string>
+    <string name="error_credentials_invalid">El usuario/contraseña no es valido</string>
+    <string name="error_invalid_password">La contraseña es muy corta</string>
+    <string name="error_incorrect_password">La contraseña es incorrecta</string>
+    <string name="error_field_required">Este campo es requerido</string>
+    <!-- LoginComandera -->
+
+    <!-- Navdrawer-->
+    <string name="nav_drawer_mas_aplicaciones">Más aplicaciones</string>
+    <string name="nav_drawer_configuracion">Configuración</string>
+    <string name="nav_drawer_contactanos">Contactanos</string>
+    <string name="nav_drawer_acerca_de">Acerca de </string>
+    <string name="nav_drawer_cerrar_sesion">Cerrar sesión</string>
+    <string name="nav_drawer_aplicacion_actual">Inicio</string>
+    <string name="nav_drawer_aplicacion_actual_area">Área</string>
+    <string name="nav_drawer_aplicacion_actual_mesa">Mesa</string>
+    <string name="nav_drawer_aplicacion_actual_carta">Carta</string>
+    <string name="nav_drawer_aplicacion_actual_grupo">Grupo</string>
+    <string name="nav_drawer_cuenta">Cuenta</string>
+    <string name="nav_drawer_aplicacion_actual_configuracion">Configuración</string>
+    <string name="navigation_drawer_open">Abrir menu</string>
+    <string name="navigation_drawer_close">Cerrar menu</string>
+    <!-- Navdrawer-->
+
+    <!-- Acerca de -->
+    <string name="lblCabeceraAcercaDe">Acerca de...</string>
+    <string name="lblVersion">2.3.0</string>
+    <string name="lblInfoGeneralAcercaDe">Información del sistema</string>
+    <string name="lblVersionAcercaDe">Versión: </string>
+    <string name="derechos_reservados">Derechos Reservados Pacific Soft S.A. de C.V. 25 Nov. 1999</string>
+    <!-- Acerca de -->
+
+    <!-- Contectanos -->
+    <string name="lblContactanosTelefonoContactanos">Telefono: </string>
+    <string name="lblContactanosCorreoContactanos">Correo: </string>
+    <string name="descripcionCorreoContactanos">pacificsotf@pacificsoft.com.mx</string>
+    <string name="lblSitioWeb">Visita nuestro sitio web: </string>
+    <string name="descripcion_sitio_web"></string>
+    <!-- Contectanos -->
+
+    <!-- Configuracion -->
+    //Label
+    <string name="lblDatosgenerales">Datos generales</string>
+    <string name="lblDatosTerminal">Configuracion de la terminal</string>
+    //Hint
+    <string name="hintUrlServiciosWEB">URL servicios WEB*</string>
+    <string name="hintEmpresa">Empresa</string>
+    <string name="hintDomicilio">Domicilio</string>
+    <string name="hintNumero">Número</string>
+    <string name="hintCodigoPostal">Código Postal</string>
+    <string name="hintColonia">Colonia</string>
+    <string name="hintRFC">R.F.C.</string>
+    <string name="hintTipoVendedor">Tipo vendedor*</string>
+    <string name="hintImpresora">Impresora *</string>
+    <string name="hintModeloImpresora">Modelo impresora*</string>
+    <string name="hintUrlMovimientos">URL servicios electronicos*</string>
+    <string name="hintTerminal">Terminal*</string>
+    <string name="hintClaveUsuario">Clave Usuario (Id cliente)</string>
+    <string name="hintNoSerie">Número de serie</string>
+    <string name="hintPinpad">Pinpad*</string>
+    <string name="hintCorreoElectronicoPagoTarjeta">Correo electrónico</string>
+    <string name="hintCaja">Caja*</string>
+    <string name="hintAlmacenMercancia">Almacén de mercancia*</string>
+    <string name="hintAlmacenMateriaPrima">Almacén de materia prima*</string>
+    <string name="lblConfiguracionAplicacion">Caja-Almacén</string>
+    <!-- Configuracion -->
+
+    <!--Modificador activity-->
+    <string name="lblPrecio">Precio $</string>
+    <!--Modificador activity-->
+
+    <!-- String Genericos  -->
+    <!--<string name="version">v1.0.1 Beta</string>-->
+    <string name="acerca_de_derechos_reservados">Derechos reservados</string>
+    <string name="titulo_pacific_start">Pacific</string>
+    <string name="titulo_pacific_end">Soft</string>
+    <string name="msj_validando_servicio">Validando servicio...</string>
+    <string name="msj_error_on_create">Ocurrió un error en el método de onCreate </string>
+    <string name="msj_error_llenado_impresora">Hubó un error al consultar la impresora</string>
+    <string name="msj_error_llenado_pinpad">Hubó un error al llenar la lista de pinpad</string>
+    <string name="msj_error_cargar_configuracion">Hubó un error al cargar la configuracion</string>
+    <string name="msj_error_enviar_comanda">Hubó un error al enviar la comanda</string>
+    <string name="msj_error_cerrar_sesion">Hubó un error al cerrar la sesión</string>
+    <string name="msj_inciando_sesion">Iniciando sesión...</string>
+    <string name="msj_alert_cerrar_sesion">Se cerrará la sesión. \n ¿Desea continuar?</string>
+    <string name="msj_alert_cerrar_sesion_sin_guardar">No se guardaran los cambios. \n ¿Desea continuar?</string>
+    <string name="msj_titulo_alerta_operacion_exitosa">Operación exitosa</string>
+    <string name="msj_titulo_alerta_error_operacion">Error de operación</string>
+    <string name="msj_boton_aceptar">Aceptar</string>
+    <string name="msj_boton_cancelar">Cancelar</string>
+    <string name="msj_conexion_exitosa">Conexión exitosa</string>
+    <string name="msj_conexion_no_disponible">Conexión no disponible</string>
+    <string name="msj_obteniendo_datos_terminal">Obteniendo datos terminal...</string>
+    <string name="msj_error_no_hay_resultado">No hay resultado</string>
+    <string name="msj_error_al_consultar_terminal">Ocurrió un error al consultar la terminal</string>
+    <string name="msj_error_al_obtener_precio">Ocurrió un error al intentar obtener el precio</string>
+    <string name="msj_obteniendo_areas">Obteniendo áreas...</string>
+    <string name="msj_obteniendo_mesas">Obteniendo mesas...</string>
+    <string name="msj_obteniendo_cartas">Obteniendo cartas...</string>
+    <string name="msj_obteniendo_cajas">Obteniendo cajas...</string>
+    <string name="msj_obteniendo_almacenes">Obteniendo almacenés...</string>
+    <string name="msj_obteniendo_comanda">Obteniendo comanda...</string>
+    <string name="msj_obteniendo_precio_articulo">Obteniendo precio del articulo...</string>
+    <string name="msj_enviando_comanda">Enviando comanda...</string>
+    <string name="msj_comanda_enviada_exitosamente">Comanda enviada exitosamente</string>
+    <string name="msj_comanda_guardando_cambios">Guardando cambios...</string>
+    <string name="msj_comanda_agregando_articulo">Agregando articulo...</string>
+    <string name="msj_comanda_eliminando_articulos">Eliminando articulos...</string>
+    <string name="msj_comanda_button_agregar_articulo">Agregar</string>
+    <string name="msj_comanda_button_guardar_cambios">Guardar</string>
+    <string name="msj_cerrando_sesion">Cerrando sesión...</string>
+    <string name="msj_obteniendo_cuentas">Obteniendo cuentas...</string>
+    <string name="msj_cerrando_caja">Cerrando caja...</string>
+    <string name="msj_tomar_mesa">Tomar mesa</string>
+    <string name="msj_tomar_mesa_descripcion">¿Desea tomar la mesa?</string>
+    <string name="msj_tomando_mesa">¿Desea tomar la mesa?</string>
+    <string name="msj_mesa_ocupada">Mesa ocupada</string>
+    <string name="msj_mesa_ocupada_descripcion">La mesa se encuentra ocupada.</string>
+    <string name="msj_mesa_no_pudo_tomar">Nose pudo tomar la mesa.</string>
+    <string name="msj_mesa_numero_cuentas">Ingrese el número de cuentas</string>
+    <string name="msj_obteniendo_notas">Obteniendo notas...</string>
+    <string name="msj_error_url_principal">Debe de ingresar la url de los servicios generales</string>
+    <string name="msj_error_tipo_vendedor">Debe de ingresar el tipo de vendedor</string>
+    <string name="msj_error_caja">Debe de seleccionar la caja</string>
+    <string name="msj_error_almacen_mercancia">Debe de seleccionar el almacén de mercancia</string>
+    <string name="msj_error_almacen_materia_prima">Debe de seleccionar el almacén de materia prima</string>
+    <string name="msj_error_limpiar_comandas">Error al limpiar comandas</string>
+    <string name="msj_limpiando_limpiar_comandas">Limpiando comandas...</string>
+    <string name="lbl_total">Total</string>
+    <string name="signo_moneda">$</string>
+    <string name="msj_editado_correctamente">Editado correctamente</string>
+    <string name="msj_agregado_correctamente">Agregado correctamente</string>
+    <string name="title_menu_toolbar_eliminar">Eliminar</string>
+    <string name="title_menu_toolbar_buscar">Buscar</string>
+    <string name="title_menu_toolbar_carrito">Comanda</string>
+    <string name="title_toolbar_mesa">Mesa : </string>
+    <string name="title_toolbar_area">Área : </string>
+    <string name="title_dialog_mesa">Mesa</string>
+    <string name="msj_boton_enviar_comanda">Enviar comanda</string>
+    <string name="msj_comanda_vacia">La comanda no debe de estar vacia.</string>
+    <string name="msj_obtieniendo_datos">Obteniendo datos...</string>
+    <string name="msj_obteniendo_modificadores">Obteniendo modificadores...</string>
+    <string name="msj_cargando_datos">Cargando datos...</string>
+    <string name="msj_no_cargo_configuracion">No cargó configuración</string>
+    <string name="msj_no_cargo_mesa_comanda">No cargó la mesa</string>
+    <string name="msj_no_contiene_mesas">No contiene mesas</string>
+    <string name="msj_debe_seleccionar_articulo">Debe de ingresar por lo menos un artículo</string>
+    <string name="msjValidandoServicio">Validando servicio...</string>
+    <!-- String Genericos  -->
+
+    <!-- String DBLocal -->
+    <string name="database_name">db_comandera</string>
+    <string name="db_empresa_nombre_tabla">ConfiguracionEmpresa</string>
+    <!-- String DBLocal -->
+
+    <!--Icons fontAwesome-->
+    <string name="icon_check_circle">\uf058</string>
+    <string name="icon_print">\uf02f</string>
+    <string name="icon_card">\uf09d</string>
+    <!--Icons fontAwesome-->
+
+    <!-- Generic static values-->
+    <string name="guardar">Guardar</string>
+    <string name="action_settings">Settings</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="dato_extra_intent_request">tipo_request</string>
+    <string name="dato_extra_articulo_comanda">articulo_comanda</string>
+    <string name="dato_extra_modificador">modificador</string>
+    <string name="tile_text_view_notas">Notas</string>
+
+
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<dimen name="app_bar_login_margin_right">32dp</dimen>-->
+
+    //Toolbar
+    <dimen name="margin_left_right_toolbar_carta_grupo">42dp</dimen>
+    //Dimens DetalleArticuloComadna
+    <dimen name="width_imagen_platillo_detalle_articulo">350dp</dimen>
+    <dimen name="height_imagen_platillo_detalle_articulo">200dp</dimen>
+    <item name="porcentaje_guide_line_underline_total_detalle_articulo" format="float" type="dimen">0.75</item>
+</resources>

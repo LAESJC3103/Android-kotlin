@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/margin_tomar_mesa"
+        android:paddingRight="@dimen/margin_tomar_mesa"
+        android:id="@+id/llsubhead"
+        android:background="@null">
+
+        <TextView
+            android:id="@+id/lblTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_tomar_mesa"
+            android:layout_marginBottom="@dimen/margin_tomar_mesa"
+            android:layout_weight="1"
+            android:textSize="@dimen/lblTextSizeTituloAlertCustom"
+            android:text=""
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/colorTituloCustomAlertDialog" />
+    </LinearLayout>
+</LinearLayout>

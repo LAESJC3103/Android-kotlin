@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLoginActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".LoginActivity"
+    tools:showIn="@layout/activity_login"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <!--tools:showIn="@layout/activity_login"-->
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintContentBody"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/constraintContentFooter"
+        app:layout_constraintLeft_toRightOf="@+id/guidelineLeftPadding"
+        app:layout_constraintRight_toLeftOf="@+id/guidelineRightPadding"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textViewTituloApp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start|top|center_vertical"
+            android:paddingLeft="@dimen/marginTopEditTextInputLogin"
+            android:paddingTop="0dp"
+            android:text="@string/app_name"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/textSizeTituloAppLogin"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/constraintContentLogo"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/constraintContentLogo" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintContentLogo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTituloApp">
+
+            <ImageView
+                android:id="@+id/imageViewLogoPacific"
+                android:layout_width="@dimen/withIconLogin"
+                android:layout_height="@dimen/heightIconLogin"
+                android:scaleType="fitXY"
+                android:src="@drawable/icono_login"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraintContentLogoTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewLogoPacific"
+                app:layout_constraintStart_toStartOf="@+id/imageViewLogoPacific"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewLogoPacific">
+
+                <TextView
+                    android:id="@+id/textViewLogoTitleLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/titulo_pacific_start"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/colorBlanco"
+                    android:textSize="@dimen/textSizeIconLogin"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/textViewLogoTitleRight"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewLogoTitleRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/titulo_pacific_end"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorBlanco"
+                    android:textSize="@dimen/textSizeIconLogin"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/textViewLogoTitleLeft"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintContentInputLogin"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/marginTopEditTextInputLogin"
+            app:layout_constraintBottom_toBottomOf="@id/constraintContentLogo"
+            app:layout_constraintLeft_toRightOf="@id/constraintContentLogo"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTituloApp"
+            app:layout_constraintVertical_chainStyle="spread_inside">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraintContentTxtUsuario"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/paddingLayoutEditTextLogin"
+                android:paddingBottom="@dimen/paddingLayoutEditTextLogin"
+                app:layout_constraintBottom_toTopOf="@id/viewUnderLinaTxtUsuario"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageViewIconTxtUsuario"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    app:srcCompat="@drawable/ic_person_login" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/txtIntputLUser"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:hintEnabled="false"
+                    app:layout_constraintLeft_toRightOf="@+id/imageViewIconTxtUsuario"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <!--<pacificsoft.pscomandera.Util.CustomTextInputEditText-->
+                    <!--android:id="@+id/email"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:hint="@string/prompt_username"-->
+                    <!--android:inputType="textEmailAddress"-->
+                    <!--android:maxLines="1"-->
+                    <!--android:singleLine="true" />-->
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/prompt_username"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/paddingLeftEditTextLogin"
+                        android:paddingRight="@dimen/paddingRightEditTextLogin"
+                        android:textColor="@color/colorBlanco"
+                        android:textColorHint="@color/colorBlanco"
+                        android:textSize="@dimen/textSizeLogin" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <!--<EditText-->
+                <!--android:id="@+id/txtUsuario"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@android:color/transparent"-->
+                <!--android:hint="@string/prompt_username"-->
+                <!--android:inputType="text"-->
+                <!--android:paddingLeft="@dimen/paddingLeftEditTextLogin"-->
+                <!--android:paddingRight="@dimen/paddingRightEditTextLogin"-->
+                <!--android:textColor="@color/colorBlanco"-->
+                <!--android:textColorHint="@color/colorBlanco"-->
+                <!--android:textSize="@dimen/textSizeLogin"-->
+                <!--app:layout_constraintBottom_toTopOf="parent"-->
+                <!--app:layout_constraintLeft_toRightOf="@+id/imageViewIconTxtUsuario"-->
+                <!--app:layout_constraintRight_toRightOf="parent"-->
+                <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+            </android.support.constraint.ConstraintLayout>
+
+            <View
+                android:id="@+id/viewUnderLinaTxtUsuario"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/colorBlanco"
+                app:layout_constraintBottom_toTopOf="@id/constraintContentTxtPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintContentTxtUsuario" />
+
+            <!--TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/contrase_a"
+                android:textAlignment="center"
+                android:textColor="@color/colorTVLogin"
+                android:textSize="@dimen/textSizeLogin"
+                android:textStyle="bold" /-->
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraintContentTxtPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginTopEditTextInputLogin"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/paddingLayoutEditTextLogin"
+                android:paddingBottom="@dimen/paddingLayoutEditTextLogin"
+                app:layout_constraintBottom_toTopOf="@id/viewUnderlineTxtPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewUnderLinaTxtUsuario">
+
+                <ImageView
+                    android:id="@+id/imageViewIconTxtPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_lock" />
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/txtIntputLPassWord"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    app:hintEnabled="false"
+                    app:hintTextAppearance="@style/hintStyleTextInputLayout"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/imageViewIconTxtPassword"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <!--<pacificsoft.pscomandera.Util.CustomTextInputEditText-->
+                    <!--android:id="@+id/password"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:hint="@string/prompt_password"-->
+                    <!--android:imeActionId="6"-->
+                    <!--android:imeActionLabel="@string/action_sign_in_short"-->
+                    <!--android:imeOptions="actionUnspecified"-->
+                    <!--android:inputType="textPassword"-->
+                    <!--android:maxLines="1"-->
+                    <!--android:singleLine="true"-->
+                    <!--android:textAllCaps="false" />-->
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/prompt_password"
+                        android:imeActionId="6"
+                        android:imeActionLabel="@string/action_sign_in_short"
+                        android:imeOptions="actionUnspecified"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/paddingLeftEditTextLogin"
+                        android:paddingRight="@dimen/paddingRightEditTextLogin"
+                        android:singleLine="true"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/textSizeLogin" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <!--<EditText-->
+                <!--android:id="@+id/txtpass"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@android:color/transparent"-->
+                <!--android:hint="@string/prompt_password"-->
+                <!--android:inputType="textPassword"-->
+                <!--android:paddingLeft="@dimen/paddingLeftEditTextLogin"-->
+                <!--android:paddingRight="@dimen/paddingRightEditTextLogin"-->
+                <!--android:textColor="@color/colorBlanco"-->
+                <!--android:textColorHint="@color/colorBlanco"-->
+                <!--android:textColorLink="@color/colorBlanco"-->
+                <!--android:textSize="@dimen/textSizeLogin"-->
+                <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--app:layout_constraintLeft_toRightOf="@+id/imageViewIconTxtPassword"-->
+                <!--app:layout_constraintRight_toRightOf="parent"-->
+                <!--app:layout_constraintTop_toTopOf="parent" />-->
+            </android.support.constraint.ConstraintLayout>
+
+            <View
+                android:id="@+id/viewUnderlineTxtPassword"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/colorBlanco"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintContentTxtPassword" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/email_sign_in_button"
+            app:mrl_rippleDelayClick="false"
+            style="@style/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintContentInputLogin">
+
+            <Button
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:text="@string/action_sign_in_short" />
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintContentFooter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_bottom_footer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/guidelineLeftPadding"
+        app:layout_constraintRight_toLeftOf="@+id/guidelineRightPadding">
+
+        <TextView
+            android:id="@+id/textViewVersionFooter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/version"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlanco"
+            android:textSize="@dimen/textSizeMarcaAgua"
+            app:layout_constraintBottom_toTopOf="@+id/textViewDerechos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewDerechos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/derechos_reservados"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlanco"
+            android:textSize="@dimen/textSizeMarcaAgua"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineLeftPadding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/login_padding" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineRightPadding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/login_padding" />
+
+</android.support.constraint.ConstraintLayout>

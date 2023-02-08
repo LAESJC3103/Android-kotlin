@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/menu_top" android:checkableBehavior="single">
+        <item
+            android:id="@+id/configuracion"
+            android:icon="@drawable/ic__configuracion"
+            android:title="@string/nav_drawer_configuracion"/>
+    </group>
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_acerca_de"
+            android:icon="@drawable/ic_informacion"
+            android:title="@string/nav_drawer_acerca_de"/>
+        <item
+            android:id="@+id/cerrar_sesion"
+            android:icon="@drawable/ic_cerrar_sesion"
+            android:title="@string/nav_drawer_contactanos"/>
+    </group>
+
+
+</menu>
