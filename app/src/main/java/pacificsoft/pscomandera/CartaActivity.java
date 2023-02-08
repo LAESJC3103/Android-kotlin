@@ -49,6 +49,7 @@ public class CartaActivity extends AppCompatActivity
 
     Configuracion configuracion;
     List<Carta> lstCartas;
+    List<Carta> lstCartas2;
     GridLayoutManager GLayoutManager;
     RecyclerView recyclerViewCartas;
     AdapterCarta adapterCarta;
